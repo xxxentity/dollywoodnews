@@ -128,7 +128,7 @@ if (!$article) {
         .article-container {
             padding: 1rem 0;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 50px auto 0 auto !important;
             position: relative;
             z-index: 1;
         }
