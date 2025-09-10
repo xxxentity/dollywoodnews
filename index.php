@@ -12,6 +12,9 @@ $latestArticles = array_slice($articles, 3);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dollywood News - Your Source for Dollywood Updates</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <link rel="icon" type="image/png" href="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
     <link rel="shortcut icon" type="image/png" href="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
     <style>
@@ -212,20 +215,21 @@ $latestArticles = array_slice($articles, 3);
         }
         
         .breaking-news-label {
-            background: var(--dark);
-            color: var(--gold);
-            padding: 0;
-            margin: 0;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100px;
-            height: 30px;
-            z-index: 1;
-            text-align: center;
-            line-height: 30px;
-            font-size: 14px;
+            background: var(--dark) !important;
+            color: var(--gold) !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            font-weight: bold !important;
+            position: absolute !important;
+            left: 0 !important;
+            top: 0 !important;
+            width: 100px !important;
+            height: 30px !important;
+            z-index: 1 !important;
+            text-align: center !important;
+            line-height: 30px !important;
+            font-size: 14px !important;
+            box-sizing: border-box !important;
         }
         
         /* Hero Section - BBC Style */
