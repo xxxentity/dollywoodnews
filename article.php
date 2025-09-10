@@ -9,8 +9,12 @@ if (!$article) {
     exit();
 }
 
-// Debug - uncomment to see article data
-// echo '<pre>'; print_r($article); echo '</pre>'; exit();
+// Debug - let's see what's in the article array
+echo '<!-- DEBUG Article Data: ';
+echo 'ID: ' . (isset($article['id']) ? $article['id'] : 'NO ID') . ', ';
+echo 'Title: ' . (isset($article['title']) ? $article['title'] : 'NO TITLE') . ', ';
+echo 'Author: ' . (isset($article['author']) ? $article['author'] : 'NO AUTHOR');
+echo ' -->';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -267,6 +271,13 @@ if (!$article) {
     <main class="article-container">
         <div class="container">
             <!-- DEBUG: Title is: <?php echo isset($article['title']) ? $article['title'] : 'NOT SET'; ?> -->
+            <div style="background: yellow; color: black; padding: 10px; margin-bottom: 20px;">
+                DEBUG INFO:<br>
+                Article ID from URL: <?php echo $articleId; ?><br>
+                Article Title: <?php echo isset($article['title']) ? htmlspecialchars($article['title']) : 'NOT SET'; ?><br>
+                Article Author: <?php echo isset($article['author']) ? htmlspecialchars($article['author']) : 'NOT SET'; ?><br>
+                Article Keys: <?php echo implode(', ', array_keys($article)); ?>
+            </div>
             <article>
                 <header class="article-header">
                     <?php if (isset($article['title']) && !empty($article['title'])): ?>
