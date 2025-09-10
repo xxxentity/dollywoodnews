@@ -129,9 +129,11 @@ if (!$article) {
         .article-container {
             padding: 3rem 0;
             max-width: 800px;
-            margin: 120px auto 0 auto !important;
+            margin: 0 auto;
             position: relative;
             z-index: 1;
+            margin-top: 200px !important;
+            background: red !important;
         }
         
         .article-header {
