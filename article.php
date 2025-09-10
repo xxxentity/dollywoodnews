@@ -139,8 +139,10 @@ if (!$article) {
         .article-header {
             text-align: center;
             margin-bottom: 3rem;
+            margin-top: 200px !important;
             padding-bottom: 2rem;
             border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+            background: blue !important;
         }
         
         .article-title {
