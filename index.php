@@ -190,13 +190,13 @@ $latestArticles = array_slice($articles, 3);
         
         /* Breaking News Ticker */
         .breaking-news {
-            background: linear-gradient(90deg, var(--gold), var(--gold-light));
-            color: var(--dark);
+            background: red !important;
+            color: white !important;
             padding: 0;
             margin: 0;
             overflow: hidden;
-            height: 20px;
-            line-height: 20px;
+            height: 50px !important;
+            line-height: 50px !important;
             font-size: 0; /* Remove whitespace between inline elements */
         }
         
