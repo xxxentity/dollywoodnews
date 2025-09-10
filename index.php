@@ -190,21 +190,21 @@ $latestArticles = array_slice($articles, 3);
         
         /* Breaking News Ticker */
         .breaking-news {
-            background: red !important;
-            color: white !important;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            color: var(--dark);
             padding: 0;
             margin: 0;
             overflow: hidden;
-            height: 50px !important;
-            line-height: 50px !important;
-            font-size: 0; /* Remove whitespace between inline elements */
+            height: 35px;
+            line-height: 35px;
+            font-size: 0;
         }
         
         .breaking-news-content {
             animation: scroll 30s linear infinite;
             white-space: nowrap;
-            height: 20px;
-            line-height: 20px;
+            height: 35px;
+            line-height: 35px;
             font-size: 14px;
             display: inline-block;
             vertical-align: top;
