@@ -44,7 +44,7 @@ if (!$article) {
             box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 9999;
             border-bottom: 3px solid #d4af37;
         }
         
