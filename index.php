@@ -189,12 +189,11 @@ $latestArticles = array_slice($articles, 3);
         .breaking-news {
             background: linear-gradient(90deg, var(--gold), var(--gold-light));
             color: var(--dark);
-            padding: 0.75rem 0;
+            padding: 0;
             margin: 0;
             overflow: hidden;
             position: relative;
-            display: flex;
-            align-items: center;
+            height: 35px;
         }
         
         .breaking-news-content {
@@ -203,6 +202,8 @@ $latestArticles = array_slice($articles, 3);
             animation: scroll 30s linear infinite;
             white-space: nowrap;
             padding: 0 0 0 100px;
+            height: 35px;
+            line-height: 35px;
         }
         
         @keyframes scroll {
@@ -213,18 +214,19 @@ $latestArticles = array_slice($articles, 3);
         .breaking-news-label {
             background: var(--dark);
             color: var(--gold);
-            padding: 0.75rem 1rem;
+            padding: 0 1rem;
             margin: 0;
             font-weight: bold;
             position: absolute;
             left: 0;
             top: 0;
-            bottom: 0;
             width: 100px;
+            height: 35px;
             z-index: 1;
             display: flex;
             align-items: center;
             justify-content: center;
+            line-height: 35px;
         }
         
         /* Hero Section - BBC Style */
