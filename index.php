@@ -193,17 +193,17 @@ $latestArticles = array_slice($articles, 3);
             margin: 0;
             overflow: hidden;
             position: relative;
-            height: 35px;
+            height: 30px;
+            line-height: 30px;
         }
         
         .breaking-news-content {
-            display: flex;
-            align-items: center;
             animation: scroll 30s linear infinite;
             white-space: nowrap;
             padding: 0 0 0 100px;
-            height: 35px;
-            line-height: 35px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
         }
         
         @keyframes scroll {
@@ -220,14 +220,12 @@ $latestArticles = array_slice($articles, 3);
             position: absolute;
             left: 0;
             top: 0;
-            bottom: 0;
             width: 100px;
+            height: 30px;
             z-index: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            text-align: center;
+            line-height: 30px;
             font-size: 14px;
-            line-height: 1;
         }
         
         /* Hero Section - BBC Style */
