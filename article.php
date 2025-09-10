@@ -8,6 +8,9 @@ if (!$article) {
     header('Location: index.php');
     exit();
 }
+
+// Debug - uncomment to see article data
+// echo '<pre>'; print_r($article); echo '</pre>'; exit();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -143,10 +146,11 @@ if (!$article) {
         
         .article-title {
             font-size: 2.5rem;
-            color: #d4af37;
+            color: #d4af37 !important;
             margin-bottom: 1rem;
             line-height: 1.2;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            font-weight: bold;
         }
         
         .article-meta {
