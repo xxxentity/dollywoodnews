@@ -30,6 +30,7 @@ if (!$article) {
             color: #fff;
             background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
             min-height: 100vh;
+            padding-top: 120px !important;
         }
         
         .container {
@@ -39,14 +40,17 @@ if (!$article) {
         }
         
         header {
-            background: rgba(0, 0, 0, 0.98) !important;
-            backdrop-filter: blur(20px) !important;
+            background: #000000 !important;
             box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
-            position: sticky !important;
+            position: fixed !important;
             top: 0 !important;
-            z-index: 999999 !important;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100% !important;
+            z-index: 2147483647 !important;
             border-bottom: 3px solid #d4af37;
         }
+        
         
         .header-content {
             display: flex;
