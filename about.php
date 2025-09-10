@@ -432,7 +432,6 @@ require_once 'includes/functions.php';
             <nav>
                 <a href="index.php" class="nav-link">Home</a>
                 <a href="about.php" class="nav-link active">About</a>
-                <a href="admin.php" class="nav-link">Admin</a>
             </nav>
         </div>
     </header>
