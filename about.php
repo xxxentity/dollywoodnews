@@ -454,25 +454,6 @@ require_once 'includes/functions.php';
             <p>Founded by passionate theme park enthusiasts, our team works tirelessly to deliver timely, accurate, and engaging content that captures the magic and excitement of this iconic Tennessee destination.</p>
         </section>
 
-        <!-- Stats Section -->
-        <div class="stats-section">
-            <div class="stat-card">
-                <div class="stat-number">500+</div>
-                <div class="stat-label">Articles Published</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">News Coverage</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">10K+</div>
-                <div class="stat-label">Monthly Readers</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">5★</div>
-                <div class="stat-label">Reader Rating</div>
-            </div>
-        </div>
 
         <!-- What We Cover Section -->
         <section class="about-section">
