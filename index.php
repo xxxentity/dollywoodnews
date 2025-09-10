@@ -195,18 +195,20 @@ $latestArticles = array_slice($articles, 3);
             padding: 0;
             margin: 0;
             overflow: hidden;
-            position: relative;
             height: 30px;
             line-height: 30px;
+            font-size: 0; /* Remove whitespace between inline elements */
         }
         
         .breaking-news-content {
             animation: scroll 30s linear infinite;
             white-space: nowrap;
-            padding: 0 0 0 100px;
             height: 30px;
             line-height: 30px;
             font-size: 14px;
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 10px;
         }
         
         @keyframes scroll {
@@ -217,19 +219,17 @@ $latestArticles = array_slice($articles, 3);
         .breaking-news-label {
             background: var(--dark) !important;
             color: var(--gold) !important;
-            padding: 0 !important;
+            padding: 0 10px !important;
             margin: 0 !important;
             font-weight: bold !important;
-            position: absolute !important;
-            left: 0 !important;
-            top: 0 !important;
             width: 100px !important;
             height: 30px !important;
-            z-index: 1 !important;
             text-align: center !important;
             line-height: 30px !important;
             font-size: 14px !important;
             box-sizing: border-box !important;
+            display: inline-block !important;
+            vertical-align: top !important;
         }
         
         /* Hero Section - BBC Style */
@@ -695,10 +695,7 @@ $latestArticles = array_slice($articles, 3);
 
     <!-- Breaking News Ticker -->
     <div class="breaking-news">
-        <div class="breaking-news-label">BREAKING</div>
-        <div class="breaking-news-content">
-            <span>🎢 Dollywood announces record-breaking attendance for 2025 season • 🎭 New shows debut this summer • 🍂 Fall festival tickets now on sale • 🎄 Christmas at Dollywood planning begins</span>
-        </div>
+        <span class="breaking-news-label">BREAKING</span><span class="breaking-news-content">🎢 Dollywood announces record-breaking attendance for 2025 season • 🎭 New shows debut this summer • 🍂 Fall festival tickets now on sale • 🎄 Christmas at Dollywood planning begins</span>
     </div>
 
     <!-- Hero Section - BBC Style -->
