@@ -190,9 +190,11 @@ $latestArticles = array_slice($articles, 3);
             background: linear-gradient(90deg, var(--gold), var(--gold-light));
             color: var(--dark);
             padding: 0;
+            margin: 0;
             overflow: hidden;
             position: relative;
             height: 40px;
+            line-height: 40px;
         }
         
         .breaking-news-content {
@@ -213,16 +215,19 @@ $latestArticles = array_slice($articles, 3);
             background: var(--dark);
             color: var(--gold);
             padding: 0 1rem;
+            margin: 0;
             font-weight: bold;
             position: absolute;
             left: 0;
             top: 0;
             bottom: 0;
             width: 100px;
+            height: 100%;
             z-index: 1;
             display: flex;
             align-items: center;
             justify-content: center;
+            line-height: 1;
         }
         
         /* Hero Section - BBC Style */
