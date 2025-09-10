@@ -555,6 +555,21 @@ $latestArticles = array_slice($articles, 3);
             margin-bottom: 1rem;
         }
         
+        .footer-links {
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+        }
+        
+        .footer-links a:hover {
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+        }
+        
         .footer-copyright {
             color: var(--gold);
             font-size: 0.85rem;
@@ -765,6 +780,10 @@ $latestArticles = array_slice($articles, 3);
         <div class="footer-content">
             <img src="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png" alt="Dollywood News" class="footer-logo">
             <p class="footer-text">Your trusted source for all things Dollywood</p>
+            <div class="footer-links">
+                <a href="/terms.php">Terms of Service</a>
+                <a href="/privacy.php">Privacy Policy</a>
+            </div>
             <p class="footer-copyright">© 2025 Dollywood News. All rights reserved.</p>
         </div>
     </footer>
