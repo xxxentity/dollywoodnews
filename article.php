@@ -39,12 +39,12 @@ if (!$article) {
         }
         
         header {
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.98) !important;
+            backdrop-filter: blur(20px) !important;
             box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
-            position: sticky;
-            top: 0;
-            z-index: 9999;
+            position: sticky !important;
+            top: 0 !important;
+            z-index: 999999 !important;
             border-bottom: 3px solid #d4af37;
         }
         
