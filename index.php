@@ -209,12 +209,16 @@ $latestArticles = array_slice($articles, 3);
         .breaking-news-label {
             background: var(--dark);
             color: var(--gold);
-            padding: 0.3rem 1rem;
+            padding: 0.5rem 1rem;
             font-weight: bold;
             margin-right: 1rem;
             position: absolute;
             left: 0;
+            top: 0;
+            bottom: 0;
             z-index: 1;
+            display: flex;
+            align-items: center;
         }
         
         /* Hero Section - BBC Style */
