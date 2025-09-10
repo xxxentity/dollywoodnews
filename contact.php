@@ -28,6 +28,8 @@ if ($_POST) {
         
         if (mail($to, $email_subject, $email_body, $headers)) {
             $message_sent = true;
+            // Clear form data on success
+            $_POST = array();
         } else {
             $error_message = 'There was an error sending your message. Please try again later.';
         }
@@ -174,6 +176,12 @@ if ($_POST) {
             transition: border-color 0.3s ease;
         }
         
+        input[type="text"]:invalid,
+        input[type="email"]:invalid,
+        textarea:invalid {
+            border-color: #e74c3c;
+        }
+        
         input[type="text"]:focus,
         input[type="email"]:focus,
         textarea:focus {
@@ -305,23 +313,23 @@ if ($_POST) {
         
         <form method="POST" action="">
             <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" value="<?= htmlspecialchars($_POST['name'] ?? '') ?>" required>
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" value="<?= htmlspecialchars($_POST['name'] ?? '') ?>" required minlength="2" maxlength="100">
             </div>
             
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" required>
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" required maxlength="255">
             </div>
             
             <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" value="<?= htmlspecialchars($_POST['subject'] ?? '') ?>" required>
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" name="subject" value="<?= htmlspecialchars($_POST['subject'] ?? '') ?>" required minlength="3" maxlength="200">
             </div>
             
             <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required><?= htmlspecialchars($_POST['message'] ?? '') ?></textarea>
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required minlength="10" maxlength="2000"><?= htmlspecialchars($_POST['message'] ?? '') ?></textarea>
             </div>
             
             <button type="submit" class="submit-btn">Send Message</button>
