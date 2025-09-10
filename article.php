@@ -30,7 +30,7 @@ if (!$article) {
             color: #fff;
             background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
             min-height: 100vh;
-            padding-top: 150px !important;
+            padding-top: 200px !important;
         }
         
         .container {
@@ -129,7 +129,7 @@ if (!$article) {
         .article-container {
             padding: 3rem 0;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 120px auto 0 auto !important;
             position: relative;
             z-index: 1;
         }
