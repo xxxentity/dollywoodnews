@@ -77,7 +77,7 @@ $latestArticles = array_slice($articles, 3);
             backdrop-filter: blur(20px);
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 9999;
             border-bottom: 2px solid var(--gold);
             box-shadow: 0 4px 30px rgba(212, 175, 55, 0.3);
             animation: slideDown 0.6s ease;
