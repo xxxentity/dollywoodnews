@@ -1,13 +1,17 @@
 <?php
 require_once 'includes/functions.php';
 $articles = getAllArticles();
+
+// Get featured articles (first 3 for hero section)
+$featuredArticles = array_slice($articles, 0, 3);
+$latestArticles = array_slice($articles, 3);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dollywood News - Your Source for Theme Park Updates</title>
+    <title>Dollywood News - Your Premier Source for Theme Park Updates</title>
     <link rel="icon" type="image/png" href="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
     <link rel="shortcut icon" type="image/png" href="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
     <style>
@@ -17,346 +21,819 @@ $articles = getAllArticles();
             box-sizing: border-box;
         }
         
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --dark: #000000;
+            --dark-gray: #1a1a1a;
+            --text-light: #ffffff;
+            --text-gray: #cccccc;
+        }
+        
         body {
-            font-family: 'Georgia', serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #fff;
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+            color: var(--text-light);
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-gray) 50%, var(--dark) 100%);
             min-height: 100vh;
+            overflow-x: hidden;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
-            position: sticky;
+        /* Loading Animation */
+        .page-loader {
+            position: fixed;
             top: 0;
-            z-index: 100;
-            border-bottom: 3px solid #d4af37;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-        
-        .logo {
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark);
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
         }
         
-        .logo img {
+        .loader-spinner {
             width: 50px;
             height: 50px;
+            border: 3px solid rgba(212, 175, 55, 0.3);
+            border-top: 3px solid var(--gold);
             border-radius: 50%;
-            border: 2px solid #d4af37;
+            animation: spin 1s linear infinite;
         }
         
-        .logo h1 {
-            color: #d4af37;
-            font-size: 1.8rem;
-            font-weight: bold;
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--gold);
+            box-shadow: 0 4px 30px rgba(212, 175, 55, 0.3);
+            animation: slideDown 0.6s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo-section:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo-img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+            50% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.8); }
+        }
+        
+        .logo-text h1 {
+            color: var(--gold);
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         
-        .tagline {
-            color: #cccccc;
-            font-size: 0.9rem;
-            margin-left: 4rem;
+        .logo-text .tagline {
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            margin-top: -2px;
         }
         
-        .nav-buttons {
+        /* Navigation */
+        nav {
             display: flex;
-            gap: 1rem;
+            gap: 2rem;
             align-items: center;
         }
         
-        .btn {
-            padding: 0.6rem 1.2rem;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 500;
+        .nav-link {
+            color: var(--text-light);
             text-decoration: none;
-            display: inline-block;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
             transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(45deg, #d4af37, #f4d03f);
-            color: #000;
-        }
-        
-        .btn-primary:hover {
-            background: linear-gradient(45deg, #f4d03f, #d4af37);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: #d4af37;
-            border: 2px solid #d4af37;
-        }
-        
-        .btn-secondary:hover {
-            background: #d4af37;
-            color: #000;
-            transform: translateY(-2px);
-        }
-        
-        .btn-logout {
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
-            color: white;
-        }
-        
-        .btn-logout:hover {
-            background: linear-gradient(45deg, #c0392b, #e74c3c);
-        }
-        
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1544306094-3e8dc1778d4e?ixlib=rb-4.0.3') center/cover;
-            padding: 4rem 0;
-            text-align: center;
             position: relative;
+            overflow: hidden;
         }
         
-        .hero::before {
+        .nav-link::before {
             content: '';
             position: absolute;
             top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .nav-link:hover::before {
+            left: 100%;
+        }
+        
+        .nav-link:hover {
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
+        
+        .nav-link.active {
+            background: linear-gradient(45deg, var(--gold), var(--gold-light));
+            color: var(--dark);
+        }
+        
+        /* Breaking News Ticker */
+        .breaking-news {
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            color: var(--dark);
+            padding: 0.5rem 0;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .breaking-news-content {
+            display: flex;
+            align-items: center;
+            animation: scroll 30s linear infinite;
+            white-space: nowrap;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .breaking-news-label {
+            background: var(--dark);
+            color: var(--gold);
+            padding: 0.3rem 1rem;
+            font-weight: bold;
+            margin-right: 1rem;
+            position: absolute;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(212, 175, 55, 0.1);
             z-index: 1;
         }
         
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #d4af37;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        .main-content {
-            padding: 3rem 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #d4af37;
-            margin-bottom: 3rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        .article-grid {
+        /* Hero Section - BBC Style */
+        .hero-section {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: 2fr 1fr;
+            gap: 1.5rem;
+            animation: fadeInUp 0.8s ease;
         }
         
-        .article-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .main-featured {
+            position: relative;
             border-radius: 15px;
             overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(212, 175, 55, 0.3);
-            transition: all 0.3s ease;
             cursor: pointer;
+            transition: all 0.4s ease;
+            animation: fadeInUp 0.8s ease;
         }
         
-        .article-card:hover {
+        .main-featured:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
-            border-color: #d4af37;
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+            border-color: var(--gold);
         }
         
-        .article-header {
-            padding: 1.5rem 1.5rem 1rem;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        .main-featured-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1544306094-3e8dc1778d4e?ixlib=rb-4.0.3') center/cover;
         }
         
-        .article-title {
-            font-size: 1.3rem;
-            color: #d4af37;
+        .main-featured-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        }
+        
+        .featured-label {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
             margin-bottom: 0.8rem;
-            line-height: 1.4;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .main-featured h2 {
+            color: var(--text-light);
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 0.8rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        .main-featured .excerpt {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
         }
         
         .article-meta {
             display: flex;
-            justify-content: space-between;
-            color: #cccccc;
-            font-size: 0.85rem;
-            margin-bottom: 1rem;
+            gap: 1rem;
+            color: var(--text-gray);
+            font-size: 0.9rem;
         }
         
-        .article-content {
-            padding: 0 1.5rem 1.5rem;
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
         }
         
-        .article-excerpt {
-            color: #ffffff;
-            line-height: 1.6;
+        /* Side Featured Articles */
+        .side-featured {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .side-article {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease backwards;
+        }
+        
+        .side-article:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .side-article:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.05);
+        }
+        
+        .side-article h3 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s ease;
+        }
+        
+        .side-article:hover h3 {
+            color: var(--gold-light);
+        }
+        
+        .side-article .excerpt {
+            color: var(--text-gray);
             font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 0.8rem;
         }
         
-        .user-info {
-            color: #d4af37;
-            font-weight: bold;
+        /* Latest News Section */
+        .latest-section {
+            max-width: 1400px;
+            margin: 3rem auto;
+            padding: 0 2rem;
         }
         
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .hero h2 {
-                font-size: 2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .article-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .tagline {
-                margin-left: 0;
-                text-align: center;
-            }
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+            animation: fadeInUp 0.8s ease;
         }
         
-        .sparkle {
-            position: fixed;
-            pointer-events: none;
-            width: 4px;
-            height: 4px;
-            background: #d4af37;
-            border-radius: 50%;
-            animation: sparkle 2s infinite;
-            z-index: 1;
+        .section-title {
+            font-size: 2rem;
+            color: var(--gold);
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            position: relative;
         }
         
-        @keyframes sparkle {
-            0%, 100% {
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+            animation: expandWidth 1s ease;
+        }
+        
+        @keyframes expandWidth {
+            from { width: 0; }
+            to { width: 50px; }
+        }
+        
+        /* News Grid */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .news-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            opacity: 0;
+            animation: fadeInScale 0.6s ease forwards;
+        }
+        
+        .news-card:nth-child(1) { animation-delay: 0.1s; }
+        .news-card:nth-child(2) { animation-delay: 0.2s; }
+        .news-card:nth-child(3) { animation-delay: 0.3s; }
+        .news-card:nth-child(4) { animation-delay: 0.4s; }
+        .news-card:nth-child(5) { animation-delay: 0.5s; }
+        
+        @keyframes fadeInScale {
+            from {
                 opacity: 0;
-                transform: scale(0);
+                transform: scale(0.9);
             }
-            50% {
+            to {
                 opacity: 1;
                 transform: scale(1);
             }
         }
+        
+        .news-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+            border-color: var(--gold);
+        }
+        
+        .news-card-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1544306094-3e8dc1778d4e?ixlib=rb-4.0.3') center/cover;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-card-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .news-card:hover .news-card-image::after {
+            left: 100%;
+        }
+        
+        .news-card-content {
+            padding: 1.5rem;
+        }
+        
+        .news-card h3 {
+            color: var(--gold);
+            font-size: 1.3rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s ease;
+        }
+        
+        .news-card:hover h3 {
+            color: var(--gold-light);
+        }
+        
+        .news-card .excerpt {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .news-card .meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.95);
+            border-top: 2px solid var(--gold);
+            margin-top: 4rem;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .footer-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+        }
+        
+        .footer-text {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-copyright {
+            color: var(--gold);
+            font-size: 0.85rem;
+        }
+        
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+            z-index: 100;
+        }
+        
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6);
+        }
+        
+        .scroll-top::before {
+            content: '↑';
+            color: var(--dark);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .side-featured {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.5rem;
+            }
+            
+            nav {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .hero-section {
+                padding: 0 1rem;
+            }
+            
+            .main-featured h2 {
+                font-size: 1.5rem;
+            }
+            
+            .side-featured {
+                grid-template-columns: 1fr;
+            }
+            
+            .news-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Loading States */
+        .skeleton {
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.2) 50%, rgba(212, 175, 55, 0.1) 100%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Selection Styling */
+        ::selection {
+            background: var(--gold);
+            color: var(--dark);
+        }
     </style>
 </head>
 <body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Header -->
     <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png" alt="Dollywood News Logo">
-                    <div>
-                        <h1>Dollywood News</h1>
-                        <div class="tagline">Your Premier Source for Theme Park Updates</div>
-                    </div>
+        <div class="header-container">
+            <a href="index.php" class="logo-section">
+                <img src="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png" alt="Dollywood News" class="logo-img">
+                <div class="logo-text">
+                    <h1>Dollywood News</h1>
+                    <div class="tagline">Your Premier Source for Theme Park Updates</div>
                 </div>
-                <div class="nav-buttons">
-                    <a href="admin.php" class="btn btn-secondary">Admin</a>
-                </div>
-            </div>
+            </a>
+            <nav>
+                <a href="index.php" class="nav-link active">Home</a>
+                <a href="about.php" class="nav-link">About</a>
+                <a href="admin.php" class="nav-link">Admin</a>
+            </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Welcome to Dollywood News</h2>
-                <p>Stay updated with the latest news, events, and magical moments from America's favorite theme park. From thrilling new attractions to heartwarming stories, we bring you all the excitement of Dollywood.</p>
+    <!-- Breaking News Ticker -->
+    <div class="breaking-news">
+        <div class="breaking-news-label">BREAKING</div>
+        <div class="breaking-news-content">
+            <span>🎢 Dollywood announces record-breaking attendance for 2025 season • 🎭 New shows debut this summer • 🍂 Fall festival tickets now on sale • 🎄 Christmas at Dollywood planning begins</span>
+        </div>
+    </div>
+
+    <!-- Hero Section - BBC Style -->
+    <?php if (!empty($featuredArticles)): ?>
+    <section class="hero-section">
+        <!-- Main Featured Article -->
+        <?php if (isset($featuredArticles[0])): ?>
+        <article class="main-featured" onclick="window.location.href='article.php?id=<?php echo $featuredArticles[0]['id']; ?>'">
+            <div class="main-featured-image"></div>
+            <div class="main-featured-content">
+                <span class="featured-label">Featured Story</span>
+                <h2><?php echo htmlspecialchars($featuredArticles[0]['title']); ?></h2>
+                <p class="excerpt"><?php echo htmlspecialchars($featuredArticles[0]['excerpt']); ?></p>
+                <div class="article-meta">
+                    <span>📝 <?php echo htmlspecialchars($featuredArticles[0]['author']); ?></span>
+                    <span>📅 <?php echo htmlspecialchars($featuredArticles[0]['date']); ?></span>
+                </div>
             </div>
+        </article>
+        <?php endif; ?>
+
+        <!-- Side Featured Articles -->
+        <div class="side-featured">
+            <?php for ($i = 1; $i < min(3, count($featuredArticles)); $i++): ?>
+            <article class="side-article" onclick="window.location.href='article.php?id=<?php echo $featuredArticles[$i]['id']; ?>'">
+                <h3><?php echo htmlspecialchars($featuredArticles[$i]['title']); ?></h3>
+                <p class="excerpt"><?php echo htmlspecialchars(substr($featuredArticles[$i]['excerpt'], 0, 100)) . '...'; ?></p>
+                <div class="article-meta">
+                    <span>📅 <?php echo htmlspecialchars($featuredArticles[$i]['date']); ?></span>
+                </div>
+            </article>
+            <?php endfor; ?>
         </div>
     </section>
+    <?php endif; ?>
 
-    <main class="main-content">
-        <div class="container">
-            <h2 class="section-title">Latest Stories</h2>
-            
-            <div class="article-grid">
-                <?php foreach ($articles as $article): ?>
-                <div class="article-card" onclick="window.location.href='article.php?id=<?php echo $article['id']; ?>'">
-                    <div class="article-header">
-                        <h3 class="article-title"><?php echo htmlspecialchars($article['title']); ?></h3>
-                        <div class="article-meta">
-                            <span><?php echo htmlspecialchars($article['author']); ?></span>
-                            <span><?php echo htmlspecialchars($article['date']); ?></span>
-                        </div>
-                    </div>
-                    <div class="article-content">
-                        <p class="article-excerpt"><?php echo htmlspecialchars($article['excerpt']); ?></p>
+    <!-- Latest News Section -->
+    <?php if (!empty($latestArticles)): ?>
+    <section class="latest-section">
+        <div class="section-header">
+            <h2 class="section-title">Latest News</h2>
+        </div>
+        
+        <div class="news-grid">
+            <?php foreach ($latestArticles as $article): ?>
+            <article class="news-card" onclick="window.location.href='article.php?id=<?php echo $article['id']; ?>'">
+                <div class="news-card-image"></div>
+                <div class="news-card-content">
+                    <h3><?php echo htmlspecialchars($article['title']); ?></h3>
+                    <p class="excerpt"><?php echo htmlspecialchars(substr($article['excerpt'], 0, 150)) . '...'; ?></p>
+                    <div class="meta">
+                        <span><?php echo htmlspecialchars($article['author']); ?></span>
+                        <span><?php echo htmlspecialchars($article['date']); ?></span>
                     </div>
                 </div>
-                <?php endforeach; ?>
-            </div>
+            </article>
+            <?php endforeach; ?>
         </div>
-    </main>
+    </section>
+    <?php endif; ?>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <img src="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png" alt="Dollywood News" class="footer-logo">
+            <p class="footer-text">Your trusted source for all things Dollywood</p>
+            <p class="footer-copyright">© 2025 Dollywood News. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop"></div>
 
     <script>
-        // Create sparkle effect
-        function createSparkle() {
-            const sparkle = document.createElement('div');
-            sparkle.className = 'sparkle';
-            sparkle.style.left = Math.random() * window.innerWidth + 'px';
-            sparkle.style.top = Math.random() * window.innerHeight + 'px';
-            document.body.appendChild(sparkle);
-            
+        // Page Loader
+        window.addEventListener('load', function() {
             setTimeout(() => {
-                sparkle.remove();
-            }, 2000);
-        }
+                document.getElementById('pageLoader').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('pageLoader').style.display = 'none';
+                }, 500);
+            }, 500);
+        });
+
+        // Scroll to Top
+        const scrollTop = document.getElementById('scrollTop');
         
-        // Create sparkles periodically
-        setInterval(createSparkle, 800);
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTop.classList.add('visible');
+            } else {
+                scrollTop.classList.remove('visible');
+            }
+        });
         
-        // Add hover effects to article cards
-        document.querySelectorAll('.article-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.querySelectorAll('.news-card, .side-article, .main-featured').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.main-featured-image');
+            if (parallax) {
+                parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Add hover sound effect (visual feedback)
+        document.querySelectorAll('.news-card, .side-article, .main-featured').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+            });
+        });
+
+        // Dynamic time update for breaking news
+        function updateBreakingNews() {
+            const breakingContent = document.querySelector('.breaking-news-content');
+            if (breakingContent) {
+                const now = new Date();
+                const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+                // You can update this with real breaking news
+            }
+        }
+        
+        setInterval(updateBreakingNews, 60000); // Update every minute
     </script>
 </body>
 </html>
