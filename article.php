@@ -126,7 +126,7 @@ if (!$article) {
         }
         
         .article-container {
-            padding: 3rem 0;
+            padding: 1rem 0;
             max-width: 800px;
             margin: 0 auto;
             position: relative;
@@ -166,6 +166,7 @@ if (!$article) {
             margin-bottom: 2rem;
             position: relative;
             z-index: 1;
+            margin-top: 0 !important;
         }
         
         .article-body {
