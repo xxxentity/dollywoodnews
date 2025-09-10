@@ -426,7 +426,7 @@ require_once 'includes/functions.php';
                 <img src="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png" alt="Dollywood News" class="logo-img">
                 <div class="logo-text">
                     <h1>Dollywood News</h1>
-                    <div class="tagline">Your Premier Source for Theme Park Updates</div>
+                    <div class="tagline">Your Source for Dollywood Updates</div>
                 </div>
             </a>
             <nav>

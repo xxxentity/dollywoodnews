@@ -11,7 +11,7 @@ $latestArticles = array_slice($articles, 3);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dollywood News - Your Premier Source for Theme Park Updates</title>
+    <title>Dollywood News - Your Source for Dollywood Updates</title>
     <link rel="icon" type="image/png" href="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
     <link rel="shortcut icon" type="image/png" href="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
     <style>
@@ -682,7 +682,7 @@ $latestArticles = array_slice($articles, 3);
                 <img src="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png" alt="Dollywood News" class="logo-img">
                 <div class="logo-text">
                     <h1>Dollywood News</h1>
-                    <div class="tagline">Your Premier Source for Theme Park Updates</div>
+                    <div class="tagline">Your Source for Dollywood Updates</div>
                 </div>
             </a>
             <nav>
