@@ -195,16 +195,16 @@ $latestArticles = array_slice($articles, 3);
             padding: 0;
             margin: 0;
             overflow: hidden;
-            height: 30px;
-            line-height: 30px;
+            height: 20px;
+            line-height: 20px;
             font-size: 0; /* Remove whitespace between inline elements */
         }
         
         .breaking-news-content {
             animation: scroll 30s linear infinite;
             white-space: nowrap;
-            height: 30px;
-            line-height: 30px;
+            height: 20px;
+            line-height: 20px;
             font-size: 14px;
             display: inline-block;
             vertical-align: top;
