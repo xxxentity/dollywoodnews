@@ -9,12 +9,7 @@ if (!$article) {
     exit();
 }
 
-// Debug - let's see what's in the article array
-echo '<!-- DEBUG Article Data: ';
-echo 'ID: ' . (isset($article['id']) ? $article['id'] : 'NO ID') . ', ';
-echo 'Title: ' . (isset($article['title']) ? $article['title'] : 'NO TITLE') . ', ';
-echo 'Author: ' . (isset($article['author']) ? $article['author'] : 'NO AUTHOR');
-echo ' -->';
+// Debug removed - article data confirmed working
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -150,14 +145,11 @@ echo ' -->';
         
         .article-title {
             font-size: 2.5rem;
-            color: #ff0000 !important; /* Bright red for testing */
+            color: #d4af37 !important;
             margin-bottom: 1rem;
             line-height: 1.2;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             font-weight: bold;
-            background-color: #ffffff !important; /* White background for visibility */
-            padding: 20px;
-            border: 3px solid #00ff00; /* Green border to make it obvious */
         }
         
         .article-meta {
@@ -270,21 +262,9 @@ echo ' -->';
 
     <main class="article-container">
         <div class="container">
-            <!-- DEBUG: Title is: <?php echo isset($article['title']) ? $article['title'] : 'NOT SET'; ?> -->
-            <div style="background: yellow; color: black; padding: 10px; margin-bottom: 20px;">
-                DEBUG INFO:<br>
-                Article ID from URL: <?php echo $articleId; ?><br>
-                Article Title: <?php echo isset($article['title']) ? htmlspecialchars($article['title']) : 'NOT SET'; ?><br>
-                Article Author: <?php echo isset($article['author']) ? htmlspecialchars($article['author']) : 'NOT SET'; ?><br>
-                Article Keys: <?php echo implode(', ', array_keys($article)); ?>
-            </div>
             <article>
                 <header class="article-header">
-                    <?php if (isset($article['title']) && !empty($article['title'])): ?>
-                        <h1 class="article-title"><?php echo htmlspecialchars($article['title']); ?></h1>
-                    <?php else: ?>
-                        <h1 class="article-title" style="color: red !important;">NO TITLE FOUND</h1>
-                    <?php endif; ?>
+                    <h1 class="article-title"><?php echo htmlspecialchars($article['title']); ?></h1>
                     <div class="article-meta">
                         <span>By <?php echo htmlspecialchars($article['author']); ?></span>
                         <span><?php echo htmlspecialchars($article['date']); ?></span>
