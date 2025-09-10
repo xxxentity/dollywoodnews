@@ -1,10 +1,7 @@
-# Basic configuration for static site
+# Basic configuration for PHP site
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
-
-# Redirect root to home.html
-RewriteRule ^$ /home.html [L]
 
 # Security: Block access to hidden files
 RewriteRule ^\.(.*)$ - [F,L]
@@ -19,5 +16,5 @@ Header always unset X-Powered-By
 Header unset X-Powered-By
 </IfModule>
 
-# Set default page
-DirectoryIndex home.html index.php index.html
+# Set default page - PHP first
+DirectoryIndex index.php index.html
