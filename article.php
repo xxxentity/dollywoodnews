@@ -1,13 +1,20 @@
 <?php
 require_once 'includes/functions.php';
-$articles = getAllArticles();
+
+$articleId = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+$article = getArticleById($articleId);
+
+if (!$article) {
+    header('Location: index.php');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dollywood News - Your Source for Theme Park Updates</title>
+    <title><?php echo htmlspecialchars($article['title']); ?> - Dollywood News</title>
     <link rel="icon" type="image/png" href="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
     <link rel="shortcut icon" type="image/png" href="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
     <style>
@@ -115,121 +122,64 @@ $articles = getAllArticles();
             transform: translateY(-2px);
         }
         
-        .btn-logout {
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
-            color: white;
-        }
-        
-        .btn-logout:hover {
-            background: linear-gradient(45deg, #c0392b, #e74c3c);
-        }
-        
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1544306094-3e8dc1778d4e?ixlib=rb-4.0.3') center/cover;
-            padding: 4rem 0;
-            text-align: center;
-            position: relative;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(212, 175, 55, 0.1);
-            z-index: 1;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #d4af37;
-            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        .main-content {
+        .article-container {
             padding: 3rem 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #d4af37;
-            margin-bottom: 3rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        .article-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .article-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            overflow: hidden;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .article-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
-            border-color: #d4af37;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .article-header {
-            padding: 1.5rem 1.5rem 1rem;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid rgba(212, 175, 55, 0.3);
         }
         
         .article-title {
-            font-size: 1.3rem;
+            font-size: 2.5rem;
             color: #d4af37;
-            margin-bottom: 0.8rem;
-            line-height: 1.4;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         
         .article-meta {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 2rem;
             color: #cccccc;
-            font-size: 0.85rem;
-            margin-bottom: 1rem;
+            font-size: 1rem;
         }
         
         .article-content {
-            padding: 0 1.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 3rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            margin-bottom: 2rem;
         }
         
-        .article-excerpt {
+        .article-body {
             color: #ffffff;
-            line-height: 1.6;
-            font-size: 0.95rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
         
-        .user-info {
+        .article-body h3 {
             color: #d4af37;
-            font-weight: bold;
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .back-button {
+            text-align: center;
+            margin-top: 2rem;
         }
         
         @media (max-width: 768px) {
@@ -238,17 +188,17 @@ $articles = getAllArticles();
                 gap: 1rem;
             }
             
-            .hero h2 {
+            .article-title {
                 font-size: 2rem;
             }
             
-            .hero p {
-                font-size: 1rem;
+            .article-content {
+                padding: 2rem 1.5rem;
             }
             
-            .article-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
+            .article-meta {
+                flex-direction: column;
+                gap: 0.5rem;
             }
             
             .tagline {
@@ -292,41 +242,33 @@ $articles = getAllArticles();
                     </div>
                 </div>
                 <div class="nav-buttons">
-                    <a href="admin.php" class="btn btn-secondary">Admin</a>
+                    <a href="index.php" class="btn btn-secondary">← Back to Home</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="hero">
+    <main class="article-container">
         <div class="container">
-            <div class="hero-content">
-                <h2>Welcome to Dollywood News</h2>
-                <p>Stay updated with the latest news, events, and magical moments from America's favorite theme park. From thrilling new attractions to heartwarming stories, we bring you all the excitement of Dollywood.</p>
-            </div>
-        </div>
-    </section>
-
-    <main class="main-content">
-        <div class="container">
-            <h2 class="section-title">Latest Stories</h2>
-            
-            <div class="article-grid">
-                <?php foreach ($articles as $article): ?>
-                <div class="article-card" onclick="window.location.href='article.php?id=<?php echo $article['id']; ?>'">
-                    <div class="article-header">
-                        <h3 class="article-title"><?php echo htmlspecialchars($article['title']); ?></h3>
-                        <div class="article-meta">
-                            <span><?php echo htmlspecialchars($article['author']); ?></span>
-                            <span><?php echo htmlspecialchars($article['date']); ?></span>
-                        </div>
+            <article>
+                <header class="article-header">
+                    <h1 class="article-title"><?php echo htmlspecialchars($article['title']); ?></h1>
+                    <div class="article-meta">
+                        <span>By <?php echo htmlspecialchars($article['author']); ?></span>
+                        <span><?php echo htmlspecialchars($article['date']); ?></span>
                     </div>
-                    <div class="article-content">
-                        <p class="article-excerpt"><?php echo htmlspecialchars($article['excerpt']); ?></p>
+                </header>
+                
+                <div class="article-content">
+                    <div class="article-body">
+                        <?php echo $article['content']; ?>
                     </div>
                 </div>
-                <?php endforeach; ?>
-            </div>
+                
+                <div class="back-button">
+                    <a href="index.php" class="btn btn-primary">← Back to All Articles</a>
+                </div>
+            </article>
         </div>
     </main>
 
@@ -346,17 +288,6 @@ $articles = getAllArticles();
         
         // Create sparkles periodically
         setInterval(createSparkle, 800);
-        
-        // Add hover effects to article cards
-        document.querySelectorAll('.article-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
     </script>
 </body>
 </html>
