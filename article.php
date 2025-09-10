@@ -130,6 +130,8 @@ if (!$article) {
             padding: 3rem 0;
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
         
         .article-header {
@@ -162,6 +164,8 @@ if (!$article) {
             padding: 3rem;
             border: 1px solid rgba(212, 175, 55, 0.3);
             margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
         }
         
         .article-body {
