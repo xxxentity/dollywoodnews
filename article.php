@@ -39,14 +39,14 @@ if (!$article) {
         }
         
         header {
-            background: #000000 !important;
+            background: #000000;
             box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            width: 100% !important;
-            z-index: 2147483647 !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 1000;
             border-bottom: 3px solid #d4af37;
         }
         
@@ -128,7 +128,8 @@ if (!$article) {
         .article-container {
             padding: 1rem 0;
             max-width: 800px;
-            margin: 120px auto 0 auto !important;
+            margin: 0 auto;
+            padding-top: 120px;
             position: relative;
             z-index: 1;
         }
