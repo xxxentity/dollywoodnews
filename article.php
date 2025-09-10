@@ -132,7 +132,7 @@ if (!$article) {
             padding: 1rem 0;
             max-width: 800px;
             margin: 0 auto;
-            padding-top: 120px;
+            padding-top: 200px; /* Increased from 120px */
             position: relative;
             z-index: 1;
         }
@@ -146,11 +146,14 @@ if (!$article) {
         
         .article-title {
             font-size: 2.5rem;
-            color: #d4af37 !important;
+            color: #ff0000 !important; /* Bright red for testing */
             margin-bottom: 1rem;
             line-height: 1.2;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
             font-weight: bold;
+            background-color: #ffffff !important; /* White background for visibility */
+            padding: 20px;
+            border: 3px solid #00ff00; /* Green border to make it obvious */
         }
         
         .article-meta {
