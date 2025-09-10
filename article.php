@@ -30,7 +30,6 @@ if (!$article) {
             color: #fff;
             background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
             min-height: 100vh;
-            padding-top: 200px !important;
         }
         
         .container {
@@ -132,17 +131,14 @@ if (!$article) {
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            margin-top: 200px !important;
-            background: red !important;
         }
         
         .article-header {
             text-align: center;
-            margin-bottom: 3rem;
-            margin-top: 200px !important;
+            margin: 180px auto 3rem auto !important;
+            max-width: 800px;
             padding-bottom: 2rem;
             border-bottom: 2px solid rgba(212, 175, 55, 0.3);
-            background: blue !important;
         }
         
         .article-title {
