@@ -263,9 +263,14 @@ if (!$article) {
 
     <main class="article-container">
         <div class="container">
+            <!-- DEBUG: Title is: <?php echo isset($article['title']) ? $article['title'] : 'NOT SET'; ?> -->
             <article>
                 <header class="article-header">
-                    <h1 class="article-title"><?php echo htmlspecialchars($article['title']); ?></h1>
+                    <?php if (isset($article['title']) && !empty($article['title'])): ?>
+                        <h1 class="article-title"><?php echo htmlspecialchars($article['title']); ?></h1>
+                    <?php else: ?>
+                        <h1 class="article-title" style="color: red !important;">NO TITLE FOUND</h1>
+                    <?php endif; ?>
                     <div class="article-meta">
                         <span>By <?php echo htmlspecialchars($article['author']); ?></span>
                         <span><?php echo htmlspecialchars($article['date']); ?></span>
