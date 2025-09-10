@@ -205,7 +205,7 @@ $latestArticles = array_slice($articles, 3);
             height: 35px;
             line-height: 35px;
             font-size: 14px;
-            padding-left: 100px;
+            padding-left: 20px;
             display: flex;
             align-items: center;
         }
@@ -696,7 +696,6 @@ $latestArticles = array_slice($articles, 3);
 
     <!-- Breaking News Ticker -->
     <div class="breaking-news">
-        <div class="breaking-news-label">BREAKING</div>
         <div class="breaking-news-content">
             <span>🎢 Dollywood announces record-breaking attendance for 2025 season • 🎭 New shows debut this summer • 🍂 Fall festival tickets now on sale • 🎄 Christmas at Dollywood planning begins</span>
         </div>
