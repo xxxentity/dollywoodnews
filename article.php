@@ -128,15 +128,14 @@ if (!$article) {
         .article-container {
             padding: 1rem 0;
             max-width: 800px;
-            margin: 50px auto 0 auto !important;
+            margin: 180px auto 0 auto !important;
             position: relative;
             z-index: 1;
         }
         
         .article-header {
             text-align: center;
-            margin: 180px auto 3rem auto !important;
-            max-width: 800px;
+            margin-bottom: 3rem;
             padding-bottom: 2rem;
             border-bottom: 2px solid rgba(212, 175, 55, 0.3);
         }
