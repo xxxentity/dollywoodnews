@@ -195,9 +195,8 @@ $latestArticles = array_slice($articles, 3);
             padding: 0;
             margin: 0;
             overflow: hidden;
+            position: relative;
             height: 35px;
-            line-height: 35px;
-            font-size: 0;
         }
         
         .breaking-news-content {
@@ -206,9 +205,9 @@ $latestArticles = array_slice($articles, 3);
             height: 35px;
             line-height: 35px;
             font-size: 14px;
-            display: inline-block;
-            vertical-align: top;
-            padding-left: 10px;
+            padding-left: 100px;
+            display: flex;
+            align-items: center;
         }
         
         @keyframes scroll {
@@ -217,19 +216,21 @@ $latestArticles = array_slice($articles, 3);
         }
         
         .breaking-news-label {
-            background: var(--dark) !important;
-            color: var(--gold) !important;
-            padding: 0 10px !important;
-            margin: 0 !important;
-            font-weight: bold !important;
-            width: 100px !important;
-            height: 30px !important;
-            text-align: center !important;
-            line-height: 30px !important;
-            font-size: 14px !important;
-            box-sizing: border-box !important;
-            display: inline-block !important;
-            vertical-align: top !important;
+            background: var(--dark);
+            color: var(--gold);
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 35px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
         }
         
         /* Hero Section - BBC Style */
@@ -695,7 +696,10 @@ $latestArticles = array_slice($articles, 3);
 
     <!-- Breaking News Ticker -->
     <div class="breaking-news">
-        <span class="breaking-news-label">BREAKING</span><span class="breaking-news-content">🎢 Dollywood announces record-breaking attendance for 2025 season • 🎭 New shows debut this summer • 🍂 Fall festival tickets now on sale • 🎄 Christmas at Dollywood planning begins</span>
+        <div class="breaking-news-label">BREAKING</div>
+        <div class="breaking-news-content">
+            <span>🎢 Dollywood announces record-breaking attendance for 2025 season • 🎭 New shows debut this summer • 🍂 Fall festival tickets now on sale • 🎄 Christmas at Dollywood planning begins</span>
+        </div>
     </div>
 
     <!-- Hero Section - BBC Style -->
