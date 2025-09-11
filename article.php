@@ -83,7 +83,7 @@ if (!$article) {
         .tagline {
             color: #cccccc;
             font-size: 0.9rem;
-            margin-left: 4rem;
+            margin-left: 0;
         }
         
         .nav-buttons {
