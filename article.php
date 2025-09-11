@@ -264,6 +264,9 @@ if (!$article) {
         <div class="container">
             <article>
                 <header class="article-header">
+                    <h1 style="font-size: 48px; color: #ff00ff; background: #00ff00; padding: 30px; margin: 20px 0; text-align: center; border: 5px solid #ff0000;">
+                        ARTICLE TITLE: <?php echo htmlspecialchars($article['title']); ?>
+                    </h1>
                     <h1 class="article-title"><?php echo htmlspecialchars($article['title']); ?></h1>
                     <div class="article-meta">
                         <span>By <?php echo htmlspecialchars($article['author']); ?></span>
