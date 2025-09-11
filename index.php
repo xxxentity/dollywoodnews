@@ -21,6 +21,9 @@ $latestArticles = array_slice($articles, 3);
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://dollywoodnews.com/">
     
+    <!-- Google Search Console Verification - Replace with your verification code -->
+    <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" /> -->
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dollywoodnews.com/">
