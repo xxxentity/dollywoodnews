@@ -27,16 +27,32 @@ function acceptCookies() {
 function rejectCookies() {
     localStorage.setItem('cookieConsent', 'rejected');
     document.getElementById('cookie-consent').style.display = 'none';
-    // Don't load tracking scripts
+    disableGoogleAnalytics();
 }
 
 function loadGoogleAdsense() {
-    // This function will be called when cookies are accepted
-    // Add your Google AdSense initialization code here
+    // Initialize Google Analytics tracking
+    if (typeof gtag !== 'undefined') {
+        gtag('consent', 'update', {
+            'analytics_storage': 'granted'
+        });
+    }
+    // Add your Google AdSense initialization code here when you get approved
+}
+
+function disableGoogleAnalytics() {
+    // Disable Google Analytics
+    if (typeof gtag !== 'undefined') {
+        gtag('consent', 'update', {
+            'analytics_storage': 'denied'
+        });
+    }
 }
 
 // Check consent on page load
 if (localStorage.getItem('cookieConsent') === 'accepted') {
     loadGoogleAdsense();
+} else if (localStorage.getItem('cookieConsent') === 'rejected') {
+    disableGoogleAnalytics();
 }
 </script>
