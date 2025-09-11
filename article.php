@@ -268,15 +268,18 @@ if (!$article) {
     <main class="article-container">
         <div class="container">
             <article>
-                <header class="article-header">
-                    <h1 class="article-title" style="color: #f4d03f !important; font-size: 3rem !important; display: block !important; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9) !important; background: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px;"><?php echo htmlspecialchars($article['title']); ?></h1>
-                    <div class="article-meta">
-                        <span>By <?php echo htmlspecialchars($article['author']); ?></span>
-                        <span><?php echo htmlspecialchars($article['date']); ?></span>
-                    </div>
-                </header>
-                
                 <div class="article-content">
+                    <!-- Title and meta moved inside content box -->
+                    <div style="text-align: center; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 2px solid rgba(212, 175, 55, 0.3);">
+                        <h1 style="color: #f4d03f; font-size: 2.5rem; margin-bottom: 1rem; line-height: 1.2; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); font-weight: bold;">
+                            <?php echo htmlspecialchars($article['title']); ?>
+                        </h1>
+                        <div style="display: flex; justify-content: center; gap: 2rem; color: #cccccc; font-size: 1rem;">
+                            <span>By <?php echo htmlspecialchars($article['author']); ?></span>
+                            <span><?php echo htmlspecialchars($article['date']); ?></span>
+                        </div>
+                    </div>
+                    
                     <div class="article-body">
                         <?php echo $article['content']; ?>
                     </div>
