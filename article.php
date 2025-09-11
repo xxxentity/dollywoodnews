@@ -330,14 +330,6 @@ if (!$article) {
 
     <main class="article-container">
         <div class="container">
-            <!-- AdSense Top Banner -->
-            <div class="adsense-container" style="text-align: center; margin: 20px 0; min-height: 90px; background: rgba(212, 175, 55, 0.1); border: 1px dashed rgba(212, 175, 55, 0.3); padding: 10px; border-radius: 5px;">
-                <!-- Replace with your AdSense code -->
-                <p style="color: #888; font-size: 12px;">Advertisement</p>
-                <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-                <!-- Your AdSense code here -->
-            </div>
-            
             <article>
                 <div class="article-content">
                     <!-- Title and meta moved inside content box -->
@@ -354,14 +346,6 @@ if (!$article) {
                     <div class="article-body">
                         <?php echo $article['content']; ?>
                     </div>
-                </div>
-                
-                <!-- AdSense Bottom Banner -->
-                <div class="adsense-container" style="text-align: center; margin: 30px 0; min-height: 250px; background: rgba(212, 175, 55, 0.1); border: 1px dashed rgba(212, 175, 55, 0.3); padding: 10px; border-radius: 5px;">
-                    <!-- Replace with your AdSense code -->
-                    <p style="color: #888; font-size: 12px;">Advertisement</p>
-                    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-                    <!-- Your AdSense code here -->
                 </div>
                 
                 <div class="back-button">
