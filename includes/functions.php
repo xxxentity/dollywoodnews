@@ -19,9 +19,11 @@ function getAllArticles() {
         }
     }
     
-    // Sort by ID descending (newest first)
+    // Sort by date descending (newest first)
     usort($articles, function($a, $b) {
-        return $b['id'] - $a['id'];
+        $dateA = strtotime($a['date']);
+        $dateB = strtotime($b['date']);
+        return $dateB - $dateA;
     });
     
     return $articles;
