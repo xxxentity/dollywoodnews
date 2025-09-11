@@ -269,15 +269,7 @@ if (!$article) {
         <div class="container">
             <article>
                 <header class="article-header">
-                    <!-- START TITLE -->
-                    <div style="background: red; padding: 20px; margin: 20px 0;">
-                        <p style="color: white;">Title should be below this:</p>
-                    </div>
-                    <h1 class="article-title" style="color: #d4af37 !important; font-size: 2.5rem !important; display: block !important;"><?php echo htmlspecialchars($article['title']); ?></h1>
-                    <div style="background: blue; padding: 20px; margin: 20px 0;">
-                        <p style="color: white;">Title should be above this</p>
-                    </div>
-                    <!-- END TITLE -->
+                    <h1 class="article-title" style="color: #f4d03f !important; font-size: 3rem !important; display: block !important; text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9) !important; background: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px;"><?php echo htmlspecialchars($article['title']); ?></h1>
                     <div class="article-meta">
                         <span>By <?php echo htmlspecialchars($article['author']); ?></span>
                         <span><?php echo htmlspecialchars($article['date']); ?></span>
