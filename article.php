@@ -144,12 +144,17 @@ if (!$article) {
         }
         
         .article-title {
-            font-size: 2.5rem;
+            font-size: 2.5rem !important;
             color: #d4af37 !important;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            font-weight: bold;
+            margin-bottom: 1rem !important;
+            line-height: 1.2 !important;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+            font-weight: bold !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            position: relative !important;
+            z-index: 10 !important;
         }
         
         .article-meta {
@@ -264,7 +269,7 @@ if (!$article) {
         <div class="container">
             <article>
                 <header class="article-header">
-                    <h1 class="article-title"><?php echo htmlspecialchars($article['title']); ?></h1>
+                    <h1 class="article-title" style="color: #d4af37 !important; font-size: 2.5rem !important; display: block !important;"><?php echo htmlspecialchars($article['title']); ?></h1>
                     <div class="article-meta">
                         <span>By <?php echo htmlspecialchars($article['author']); ?></span>
                         <span><?php echo htmlspecialchars($article['date']); ?></span>
