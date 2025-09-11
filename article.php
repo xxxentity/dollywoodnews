@@ -1,4 +1,5 @@
 <?php
+require_once 'includes/security.php';
 require_once 'includes/functions.php';
 
 $articleId = isset($_GET['id']) ? (int)$_GET['id'] : 0;
@@ -17,6 +18,30 @@ if (!$article) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($article['title']); ?> - Dollywood News</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="<?php echo htmlspecialchars($article['excerpt']); ?>">
+    <meta name="keywords" content="Dollywood, theme park, Tennessee, Pigeon Forge, Dolly Parton, attractions, news, <?php echo htmlspecialchars(str_replace(' ', ', ', $article['title'])); ?>">
+    <meta name="author" content="<?php echo htmlspecialchars($article['author']); ?>">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dollywoodnews.com/article.php?id=<?php echo $article['id']; ?>">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://dollywoodnews.com/article.php?id=<?php echo $article['id']; ?>">
+    <meta property="og:title" content="<?php echo htmlspecialchars($article['title']); ?>">
+    <meta property="og:description" content="<?php echo htmlspecialchars($article['excerpt']); ?>">
+    <meta property="og:image" content="<?php echo htmlspecialchars($article['image']); ?>">
+    <meta property="article:published_time" content="<?php echo date('c', strtotime($article['date'])); ?>">
+    <meta property="article:author" content="<?php echo htmlspecialchars($article['author']); ?>">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://dollywoodnews.com/article.php?id=<?php echo $article['id']; ?>">
+    <meta name="twitter:title" content="<?php echo htmlspecialchars($article['title']); ?>">
+    <meta name="twitter:description" content="<?php echo htmlspecialchars($article['excerpt']); ?>">
+    <meta name="twitter:image" content="<?php echo htmlspecialchars($article['image']); ?>">
+    
     <link rel="icon" type="image/png" href="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
     <link rel="shortcut icon" type="image/png" href="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
     <style>
@@ -248,6 +273,34 @@ if (!$article) {
     </style>
 </head>
 <body>
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "<?php echo htmlspecialchars($article['title']); ?>",
+        "image": "<?php echo htmlspecialchars($article['image']); ?>",
+        "datePublished": "<?php echo date('c', strtotime($article['date'])); ?>",
+        "dateModified": "<?php echo date('c', strtotime($article['date'])); ?>",
+        "author": {
+            "@type": "Person",
+            "name": "<?php echo htmlspecialchars($article['author']); ?>"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Dollywood News",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png"
+            }
+        },
+        "description": "<?php echo htmlspecialchars($article['excerpt']); ?>",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://dollywoodnews.com/article.php?id=<?php echo $article['id']; ?>"
+        }
+    }
+    </script>
     <header>
         <div class="container">
             <div class="header-content">
@@ -267,6 +320,14 @@ if (!$article) {
 
     <main class="article-container">
         <div class="container">
+            <!-- AdSense Top Banner -->
+            <div class="adsense-container" style="text-align: center; margin: 20px 0; min-height: 90px; background: rgba(212, 175, 55, 0.1); border: 1px dashed rgba(212, 175, 55, 0.3); padding: 10px; border-radius: 5px;">
+                <!-- Replace with your AdSense code -->
+                <p style="color: #888; font-size: 12px;">Advertisement</p>
+                <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+                <!-- Your AdSense code here -->
+            </div>
+            
             <article>
                 <div class="article-content">
                     <!-- Title and meta moved inside content box -->
@@ -283,6 +344,14 @@ if (!$article) {
                     <div class="article-body">
                         <?php echo $article['content']; ?>
                     </div>
+                </div>
+                
+                <!-- AdSense Bottom Banner -->
+                <div class="adsense-container" style="text-align: center; margin: 30px 0; min-height: 250px; background: rgba(212, 175, 55, 0.1); border: 1px dashed rgba(212, 175, 55, 0.3); padding: 10px; border-radius: 5px;">
+                    <!-- Replace with your AdSense code -->
+                    <p style="color: #888; font-size: 12px;">Advertisement</p>
+                    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+                    <!-- Your AdSense code here -->
                 </div>
                 
                 <div class="back-button">
@@ -309,5 +378,7 @@ if (!$article) {
         // Create sparkles periodically
         setInterval(createSparkle, 800);
     </script>
+    
+    <?php include 'includes/cookie-consent.php'; ?>
 </body>
 </html>

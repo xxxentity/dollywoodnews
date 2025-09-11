@@ -1,4 +1,5 @@
 <?php
+require_once 'includes/security.php';
 require_once 'includes/functions.php';
 $articles = getAllArticles();
 
@@ -11,10 +12,30 @@ $latestArticles = array_slice($articles, 3);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dollywood News - Your Source for Dollywood Updates</title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <title>Dollywood News - Latest Theme Park Updates, Attractions & Events | Pigeon Forge, TN</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get the latest Dollywood theme park news, updates on new attractions, events, shows, and exclusive coverage of Dolly Parton's Tennessee mountain resort. Your premier source for Dollywood information.">
+    <meta name="keywords" content="Dollywood, theme park news, Pigeon Forge, Tennessee, Dolly Parton, roller coasters, attractions, events, Smoky Mountains, theme park updates, Southern hospitality, family entertainment">
+    <meta name="author" content="Dollywood News">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dollywoodnews.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dollywoodnews.com/">
+    <meta property="og:title" content="Dollywood News - Latest Theme Park Updates & Attractions">
+    <meta property="og:description" content="Your premier source for Dollywood theme park news, new attractions, events, and exclusive coverage from Pigeon Forge, Tennessee.">
+    <meta property="og:image" content="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
+    <meta property="og:site_name" content="Dollywood News">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://dollywoodnews.com/">
+    <meta name="twitter:title" content="Dollywood News - Latest Theme Park Updates & Attractions">
+    <meta name="twitter:description" content="Your premier source for Dollywood theme park news, new attractions, events, and exclusive coverage from Pigeon Forge, Tennessee.">
+    <meta name="twitter:image" content="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
+    
     <link rel="icon" type="image/png" href="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
     <link rel="shortcut icon" type="image/png" href="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
     <style>
@@ -869,5 +890,31 @@ $latestArticles = array_slice($articles, 3);
         
         setInterval(updateBreakingNews, 60000); // Update every minute
     </script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Dollywood News",
+        "url": "https://dollywoodnews.com/",
+        "description": "Your premier source for Dollywood theme park news, updates on new attractions, events, and exclusive coverage from Pigeon Forge, Tennessee.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Dollywood News",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png"
+            }
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://dollywoodnews.com/search.php?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <?php include 'includes/cookie-consent.php'; ?>
 </body>
 </html>

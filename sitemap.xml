@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Homepage -->
+    <url>
+        <loc>https://dollywoodnews.com/</loc>
+        <lastmod>2025-09-10</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Static Pages -->
+    <url>
+        <loc>https://dollywoodnews.com/about.php</loc>
+        <lastmod>2025-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://dollywoodnews.com/contact.php</loc>
+        <lastmod>2025-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://dollywoodnews.com/privacy.php</loc>
+        <lastmod>2025-09-10</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://dollywoodnews.com/terms.php</loc>
+        <lastmod>2025-09-10</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Articles -->
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=1</loc>
+        <lastmod>2025-06-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=2</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=3</loc>
+        <lastmod>2025-06-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=4</loc>
+        <lastmod>2025-05-25</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=5</loc>
+        <lastmod>2025-05-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+</urlset>

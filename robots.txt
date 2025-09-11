@@ -1,0 +1,32 @@
+# Robots.txt for Dollywood News
+# Allow all crawlers
+
+User-agent: *
+Allow: /
+Disallow: /admin.php
+Disallow: /includes/
+Disallow: /.git/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://dollywoodnews.com/sitemap.xml
+
+# Crawl-delay (in seconds) - be nice to servers
+Crawl-delay: 1
+
+# Google AdSense
+User-agent: Mediapartners-Google
+Allow: /
+
+# Major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
