@@ -368,7 +368,7 @@ $articles = $isLoggedIn ? getAllArticles() : [];
                             <p>By <?php echo htmlspecialchars($article['author']); ?> | <?php echo htmlspecialchars($article['date']); ?></p>
                         </div>
                         <div class="article-actions">
-                            <a href="article.php?id=<?php echo $article['id']; ?>" class="btn btn-secondary" target="_blank">View</a>
+                            <a href="article/<?php echo $article['id']; ?>/<?php echo generateSlug($article['title']); ?>" class="btn btn-secondary" target="_blank">View</a>
                             <a href="admin.php?edit=<?php echo $article['id']; ?>" class="btn btn-primary">Edit</a>
                             <a href="admin.php?delete=<?php echo $article['id']; ?>" class="btn btn-danger" 
                                onclick="return confirm('Are you sure you want to delete this article?')">Delete</a>

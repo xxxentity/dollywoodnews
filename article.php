@@ -24,11 +24,11 @@ if (!$article) {
     <meta name="keywords" content="Dollywood, theme park, Tennessee, Pigeon Forge, Dolly Parton, attractions, news, <?php echo htmlspecialchars(str_replace(' ', ', ', $article['title'])); ?>">
     <meta name="author" content="<?php echo htmlspecialchars($article['author']); ?>">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://dollywoodnews.com/article.php?id=<?php echo $article['id']; ?>">
+    <link rel="canonical" href="https://dollywoodnews.com/article/<?php echo $article['id']; ?>/<?php echo generateSlug($article['title']); ?>">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://dollywoodnews.com/article.php?id=<?php echo $article['id']; ?>">
+    <meta property="og:url" content="https://dollywoodnews.com/article/<?php echo $article['id']; ?>/<?php echo generateSlug($article['title']); ?>">
     <meta property="og:title" content="<?php echo htmlspecialchars($article['title']); ?>">
     <meta property="og:description" content="<?php echo htmlspecialchars($article['excerpt']); ?>">
     <meta property="og:image" content="<?php echo htmlspecialchars($article['image']); ?>">
@@ -37,7 +37,7 @@ if (!$article) {
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://dollywoodnews.com/article.php?id=<?php echo $article['id']; ?>">
+    <meta name="twitter:url" content="https://dollywoodnews.com/article/<?php echo $article['id']; ?>/<?php echo generateSlug($article['title']); ?>">
     <meta name="twitter:title" content="<?php echo htmlspecialchars($article['title']); ?>">
     <meta name="twitter:description" content="<?php echo htmlspecialchars($article['excerpt']); ?>">
     <meta name="twitter:image" content="<?php echo htmlspecialchars($article['image']); ?>">
@@ -307,7 +307,7 @@ if (!$article) {
         "description": "<?php echo htmlspecialchars($article['excerpt']); ?>",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://dollywoodnews.com/article.php?id=<?php echo $article['id']; ?>"
+            "@id": "https://dollywoodnews.com/article/<?php echo $article['id']; ?>/<?php echo generateSlug($article['title']); ?>"
         }
     }
     </script>

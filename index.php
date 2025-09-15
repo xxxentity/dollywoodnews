@@ -756,7 +756,7 @@ $latestArticles = array_slice($articles, 3);
     <section class="hero-section">
         <!-- Main Featured Article -->
         <?php if (isset($featuredArticles[0])): ?>
-        <article class="main-featured" onclick="window.location.href='article.php?id=<?php echo $featuredArticles[0]['id']; ?>'">
+        <article class="main-featured" onclick="window.location.href='article/<?php echo $featuredArticles[0]['id']; ?>/<?php echo generateSlug($featuredArticles[0]['title']); ?>'">
             <div class="main-featured-image" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('<?php echo isset($featuredArticles[0]['image']) ? $featuredArticles[0]['image'] : 'https://images.unsplash.com/photo-1544306094-3e8dc1778d4e?w=800'; ?>') center/cover;"></div>
             <div class="main-featured-content">
                 <span class="featured-label">Featured Story</span>
@@ -773,7 +773,7 @@ $latestArticles = array_slice($articles, 3);
         <!-- Side Featured Articles -->
         <div class="side-featured">
             <?php for ($i = 1; $i < min(3, count($featuredArticles)); $i++): ?>
-            <article class="side-article" onclick="window.location.href='article.php?id=<?php echo $featuredArticles[$i]['id']; ?>'">
+            <article class="side-article" onclick="window.location.href='article/<?php echo $featuredArticles[$i]['id']; ?>/<?php echo generateSlug($featuredArticles[$i]['title']); ?>'">
                 <h3><?php echo htmlspecialchars($featuredArticles[$i]['title']); ?></h3>
                 <p class="excerpt"><?php echo htmlspecialchars(substr($featuredArticles[$i]['excerpt'], 0, 100)) . '...'; ?></p>
                 <div class="article-meta">
@@ -794,7 +794,7 @@ $latestArticles = array_slice($articles, 3);
         
         <div class="news-grid">
             <?php foreach ($latestArticles as $article): ?>
-            <article class="news-card" onclick="window.location.href='article.php?id=<?php echo $article['id']; ?>'">
+            <article class="news-card" onclick="window.location.href='article/<?php echo $article['id']; ?>/<?php echo generateSlug($article['title']); ?>'">
                 <div class="news-card-image" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('<?php echo isset($article['image']) ? $article['image'] : 'https://images.unsplash.com/photo-1544306094-3e8dc1778d4e?w=800'; ?>') center/cover;"></div>
                 <div class="news-card-content">
                     <h3><?php echo htmlspecialchars($article['title']); ?></h3>
