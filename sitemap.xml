@@ -3,11 +3,11 @@
     <!-- Homepage -->
     <url>
         <loc>https://dollywoodnews.com/</loc>
-        <lastmod>2025-09-10</lastmod>
+        <lastmod>2025-09-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
-    
+
     <!-- Static Pages -->
     <url>
         <loc>https://dollywoodnews.com/about.php</loc>
@@ -15,243 +15,438 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
+
     <url>
         <loc>https://dollywoodnews.com/contact.php</loc>
         <lastmod>2025-09-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
-    
+
     <url>
         <loc>https://dollywoodnews.com/privacy.php</loc>
         <lastmod>2025-09-10</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
-    
+
     <url>
         <loc>https://dollywoodnews.com/terms.php</loc>
         <lastmod>2025-09-10</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
-    
-    <!-- Articles -->
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=1</loc>
-        <lastmod>2025-06-15</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://dollywoodnews.com/admin.php</loc>
+        <lastmod>2025-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Articles (Total: 56) -->
+    <!-- Week 13 Articles -->
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=56</loc>
+        <lastmod>2025-09-15</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=2</loc>
-        <lastmod>2025-06-10</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://dollywoodnews.com/article.php?id=55</loc>
+        <lastmod>2025-09-14</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=3</loc>
-        <lastmod>2025-06-05</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://dollywoodnews.com/article.php?id=54</loc>
+        <lastmod>2025-09-13</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=4</loc>
-        <lastmod>2025-05-25</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://dollywoodnews.com/article.php?id=53</loc>
+        <lastmod>2025-09-12</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
+
+    <!-- Week 12 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=5</loc>
-        <lastmod>2025-05-20</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://dollywoodnews.com/article.php?id=52</loc>
+        <lastmod>2025-09-06</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=6</loc>
-        <lastmod>2025-06-15</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://dollywoodnews.com/article.php?id=51</loc>
+        <lastmod>2025-09-05</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=7</loc>
-        <lastmod>2025-06-18</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://dollywoodnews.com/article.php?id=50</loc>
+        <lastmod>2025-09-04</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=8</loc>
-        <lastmod>2025-06-22</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://dollywoodnews.com/article.php?id=49</loc>
+        <lastmod>2025-09-03</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=9</loc>
-        <lastmod>2025-06-19</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://dollywoodnews.com/article.php?id=48</loc>
+        <lastmod>2025-09-02</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    
+
+    <!-- Week 11 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=10</loc>
-        <lastmod>2025-06-20</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=47</loc>
+        <lastmod>2025-08-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=11</loc>
-        <lastmod>2025-06-25</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=46</loc>
+        <lastmod>2025-08-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=12</loc>
-        <lastmod>2025-06-26</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=45</loc>
+        <lastmod>2025-08-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=13</loc>
-        <lastmod>2025-06-27</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=44</loc>
+        <lastmod>2025-08-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-    
+
+    <!-- Week 10 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=14</loc>
-        <lastmod>2025-06-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=43</loc>
+        <lastmod>2025-08-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=15</loc>
-        <lastmod>2025-07-02</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=42</loc>
+        <lastmod>2025-08-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=16</loc>
-        <lastmod>2025-07-03</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=41</loc>
+        <lastmod>2025-08-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-    
+
+    <!-- Week 9 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=17</loc>
-        <lastmod>2025-07-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=40</loc>
+        <lastmod>2025-08-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=18</loc>
-        <lastmod>2025-07-05</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=39</loc>
+        <lastmod>2025-08-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=19</loc>
-        <lastmod>2025-07-08</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=38</loc>
+        <lastmod>2025-08-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
-    
+
+    <!-- Week 8 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=20</loc>
-        <lastmod>2025-07-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=37</loc>
+        <lastmod>2025-08-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=21</loc>
-        <lastmod>2025-07-10</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=36</loc>
+        <lastmod>2025-08-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=22</loc>
-        <lastmod>2025-07-12</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=35</loc>
+        <lastmod>2025-08-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
-    
+
+    <!-- Week 7 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=23</loc>
-        <lastmod>2025-07-14</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=34</loc>
+        <lastmod>2025-07-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=24</loc>
-        <lastmod>2025-07-15</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=33</loc>
+        <lastmod>2025-07-28</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=25</loc>
-        <lastmod>2025-07-17</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=32</loc>
+        <lastmod>2025-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
-    
+
+    <!-- Week 6 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=26</loc>
-        <lastmod>2025-07-18</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=31</loc>
+        <lastmod>2025-07-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=27</loc>
-        <lastmod>2025-07-19</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=30</loc>
+        <lastmod>2025-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
-    
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=29</loc>
+        <lastmod>2025-07-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
     <url>
         <loc>https://dollywoodnews.com/article.php?id=28</loc>
         <lastmod>2025-07-21</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=29</loc>
-        <lastmod>2025-07-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=27</loc>
+        <lastmod>2025-07-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
-    
+
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=30</loc>
-        <lastmod>2025-07-25</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=26</loc>
+        <lastmod>2025-07-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
-    
+
+    <!-- Week 5 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=31</loc>
-        <lastmod>2025-07-26</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://dollywoodnews.com/article.php?id=25</loc>
+        <lastmod>2025-07-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=24</loc>
+        <lastmod>2025-07-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=23</loc>
+        <lastmod>2025-07-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=22</loc>
+        <lastmod>2025-07-13</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Week 4 Articles -->
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=21</loc>
+        <lastmod>2025-07-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=20</loc>
+        <lastmod>2025-07-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=19</loc>
+        <lastmod>2025-07-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=18</loc>
+        <lastmod>2025-07-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=17</loc>
+        <lastmod>2025-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Week 3 Articles -->
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=16</loc>
+        <lastmod>2025-07-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=15</loc>
+        <lastmod>2025-07-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=14</loc>
+        <lastmod>2025-06-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=13</loc>
+        <lastmod>2025-06-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Week 2 Articles -->
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=12</loc>
+        <lastmod>2025-06-26</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=11</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=10</loc>
+        <lastmod>2025-06-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=9</loc>
+        <lastmod>2025-06-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=8</loc>
+        <lastmod>2025-06-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Week 1 Articles -->
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=7</loc>
+        <lastmod>2025-06-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=6</loc>
+        <lastmod>2025-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=5</loc>
+        <lastmod>2025-06-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=4</loc>
+        <lastmod>2025-06-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=3</loc>
+        <lastmod>2025-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=2</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/article.php?id=1</loc>
+        <lastmod>2025-06-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
     </url>
 </urlset>

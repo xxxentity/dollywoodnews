@@ -42,25 +42,33 @@ function getArticleById($id) {
 
 function saveArticle($article) {
     $articlesDir = __DIR__ . '/../articles/';
-    
+
     if (!is_dir($articlesDir)) {
         mkdir($articlesDir, 0755, true);
     }
-    
+
     // Generate new ID if not provided
     if (!isset($article['id']) || !$article['id']) {
         $article['id'] = getNextArticleId();
     }
-    
+
     // Add current date if not provided
     if (!isset($article['date']) || !$article['date']) {
         $article['date'] = date('F j, Y');
     }
-    
+
     $filename = $articlesDir . $article['id'] . '.json';
     $json = json_encode($article, JSON_PRETTY_PRINT);
-    
-    return file_put_contents($filename, $json) !== false;
+
+    $result = file_put_contents($filename, $json) !== false;
+
+    // Update sitemap after saving article
+    if ($result) {
+        require_once __DIR__ . '/sitemap-generator.php';
+        updateSitemapAfterArticleChange();
+    }
+
+    return $result;
 }
 
 function getNextArticleId() {
@@ -78,11 +86,19 @@ function getNextArticleId() {
 
 function deleteArticle($id) {
     $articleFile = __DIR__ . '/../articles/' . $id . '.json';
-    
+
     if (file_exists($articleFile)) {
-        return unlink($articleFile);
+        $result = unlink($articleFile);
+
+        // Update sitemap after deleting article
+        if ($result) {
+            require_once __DIR__ . '/sitemap-generator.php';
+            updateSitemapAfterArticleChange();
+        }
+
+        return $result;
     }
-    
+
     return false;
 }
 
