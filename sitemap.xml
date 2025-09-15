@@ -10,31 +10,38 @@
 
     <!-- Static Pages -->
     <url>
-        <loc>https://dollywoodnews.com/about.php</loc>
+        <loc>https://dollywoodnews.com/about</loc>
         <lastmod>2025-09-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://dollywoodnews.com/contact.php</loc>
+        <loc>https://dollywoodnews.com/contact</loc>
         <lastmod>2025-09-10</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://dollywoodnews.com/privacy.php</loc>
+        <loc>https://dollywoodnews.com/privacy</loc>
         <lastmod>2025-09-10</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
-        <loc>https://dollywoodnews.com/terms.php</loc>
+        <loc>https://dollywoodnews.com/terms</loc>
         <lastmod>2025-09-10</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>yearly</changefreq>
         <priority>0.5</priority>
+    </url>
+
+    <url>
+        <loc>https://dollywoodnews.com/sitemap</loc>
+        <lastmod>2025-09-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
     </url>
 
     <url>

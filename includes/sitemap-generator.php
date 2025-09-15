@@ -24,10 +24,11 @@ function generateSitemap() {
 
     // Static Pages
     $staticPages = [
-        ['path' => '/about.php', 'changefreq' => 'monthly', 'priority' => '0.8'],
-        ['path' => '/contact.php', 'changefreq' => 'monthly', 'priority' => '0.7'],
-        ['path' => '/privacy.php', 'changefreq' => 'yearly', 'priority' => '0.5'],
-        ['path' => '/terms.php', 'changefreq' => 'yearly', 'priority' => '0.5'],
+        ['path' => '/about', 'changefreq' => 'monthly', 'priority' => '0.8'],
+        ['path' => '/contact', 'changefreq' => 'monthly', 'priority' => '0.7'],
+        ['path' => '/privacy', 'changefreq' => 'yearly', 'priority' => '0.5'],
+        ['path' => '/terms', 'changefreq' => 'yearly', 'priority' => '0.5'],
+        ['path' => '/sitemap', 'changefreq' => 'weekly', 'priority' => '0.4'],
         ['path' => '/admin.php', 'changefreq' => 'monthly', 'priority' => '0.3']
     ];
 

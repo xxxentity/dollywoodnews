@@ -322,7 +322,7 @@ if (!$article) {
                     </div>
                 </div>
                 <div class="nav-buttons">
-                    <a href="index.php" class="btn btn-secondary">← Back to Home</a>
+                    <a href="/" class="btn btn-secondary">← Back to Home</a>
                 </div>
             </div>
         </div>
@@ -349,7 +349,7 @@ if (!$article) {
                 </div>
                 
                 <div class="back-button">
-                    <a href="index.php" class="btn btn-primary">← Back to All Articles</a>
+                    <a href="/" class="btn btn-primary">← Back to All Articles</a>
                 </div>
             </article>
         </div>

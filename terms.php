@@ -181,7 +181,7 @@ require_once 'includes/functions.php';
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/about.php">About</a></li>
+                    <li><a href="/about">About</a></li>
                 </ul>
             </nav>
         </div>
@@ -221,8 +221,8 @@ require_once 'includes/functions.php';
         <div class="footer-content">
             <div class="footer-tagline">Your trusted source for all things Dollywood</div>
             <div class="footer-links">
-                <a href="/terms.php">Terms of Service</a>
-                <a href="/privacy.php">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/privacy">Privacy Policy</a>
             </div>
             <div class="footer-copyright">© 2025 Dollywood News. All rights reserved.</div>
         </div>

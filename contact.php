@@ -289,8 +289,8 @@ if ($_POST) {
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li><a href="/about.php">About</a></li>
-                    <li><a href="/contact.php">Contact</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -341,8 +341,8 @@ if ($_POST) {
             <img src="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png" alt="Dollywood News" class="footer-logo">
             <p class="footer-text">Your trusted source for all things Dollywood</p>
             <div class="footer-links">
-                <a href="/terms.php">Terms of Service</a>
-                <a href="/privacy.php">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/privacy">Privacy Policy</a>
             </div>
             <p class="footer-copyright">© 2025 Dollywood News. All rights reserved.</p>
         </div>

@@ -16,6 +16,13 @@ RewriteRule ^includes/ - [F,L]
 # SEO friendly URLs for articles
 RewriteRule ^article/([0-9]+)/(.*)$ article.php?id=$1 [L,QSA]
 
+# Clean URLs for static pages
+RewriteRule ^about/?$ about.php [L]
+RewriteRule ^contact/?$ contact.php [L]
+RewriteRule ^privacy/?$ privacy.php [L]
+RewriteRule ^terms/?$ terms.php [L]
+RewriteRule ^sitemap/?$ sitemap.php [L]
+
 # Protect against SQL injection
 RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
 RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]

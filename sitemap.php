@@ -90,16 +90,16 @@ foreach ($articles as $article) {
                     <a href="/">Homepage</a>
                 </div>
                 <div class="sitemap-link">
-                    <a href="/about.php">About Us</a>
+                    <a href="/about">About Us</a>
                 </div>
                 <div class="sitemap-link">
-                    <a href="/contact.php">Contact</a>
+                    <a href="/contact">Contact</a>
                 </div>
                 <div class="sitemap-link">
-                    <a href="/privacy.php">Privacy Policy</a>
+                    <a href="/privacy">Privacy Policy</a>
                 </div>
                 <div class="sitemap-link">
-                    <a href="/terms.php">Terms of Service</a>
+                    <a href="/terms">Terms of Service</a>
                 </div>
             </div>
         </div>

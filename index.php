@@ -729,7 +729,7 @@ $latestArticles = array_slice($articles, 3);
     <!-- Header -->
     <header>
         <div class="header-container">
-            <a href="index.php" class="logo-section">
+            <a href="/" class="logo-section">
                 <img src="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png" alt="Dollywood News" class="logo-img">
                 <div class="logo-text">
                     <h1>Dollywood News</h1>
@@ -737,9 +737,9 @@ $latestArticles = array_slice($articles, 3);
                 </div>
             </a>
             <nav>
-                <a href="index.php" class="nav-link active">Home</a>
-                <a href="about.php" class="nav-link">About</a>
-                <a href="contact.php" class="nav-link">Contact</a>
+                <a href="/" class="nav-link active">Home</a>
+                <a href="/about" class="nav-link">About</a>
+                <a href="/contact" class="nav-link">Contact</a>
             </nav>
         </div>
     </header>
@@ -816,8 +816,8 @@ $latestArticles = array_slice($articles, 3);
             <img src="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png" alt="Dollywood News" class="footer-logo">
             <p class="footer-text">Your trusted source for all things Dollywood</p>
             <div class="footer-links">
-                <a href="/terms.php">Terms of Service</a>
-                <a href="/privacy.php">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+                <a href="/privacy">Privacy Policy</a>
             </div>
             <p class="footer-copyright">© 2025 Dollywood News. All rights reserved.</p>
         </div>

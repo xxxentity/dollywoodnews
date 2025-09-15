@@ -10,7 +10,7 @@ require_once 'includes/functions.php';
     <title>About Dollywood News - Your Premier Theme Park News Source</title>
     <meta name="description" content="Learn about Dollywood News, your trusted source for theme park updates, attraction news, and exclusive coverage from Pigeon Forge, Tennessee.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://dollywoodnews.com/about.php">
+    <link rel="canonical" href="https://dollywoodnews.com/about">
     
     <link rel="icon" type="image/png" href="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
     <link rel="shortcut icon" type="image/png" href="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png">
@@ -436,7 +436,7 @@ require_once 'includes/functions.php';
     <!-- Header -->
     <header>
         <div class="header-container">
-            <a href="index.php" class="logo-section">
+            <a href="/" class="logo-section">
                 <img src="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png" alt="Dollywood News" class="logo-img">
                 <div class="logo-text">
                     <h1>Dollywood News</h1>
@@ -444,8 +444,9 @@ require_once 'includes/functions.php';
                 </div>
             </a>
             <nav>
-                <a href="index.php" class="nav-link">Home</a>
-                <a href="about.php" class="nav-link active">About</a>
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about" class="nav-link active">About</a>
+                <a href="/contact" class="nav-link">Contact</a>
             </nav>
         </div>
     </header>

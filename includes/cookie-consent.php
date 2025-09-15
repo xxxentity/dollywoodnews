@@ -2,7 +2,7 @@
     <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
         <p style="margin: 0; flex: 1;">
             We use cookies to enhance your experience and serve personalized ads. By continuing to use this site, you agree to our 
-            <a href="/privacy.php" style="color: #d4af37;">Privacy Policy</a> and cookie usage.
+            <a href="/privacy" style="color: #d4af37;">Privacy Policy</a> and cookie usage.
         </p>
         <div style="display: flex; gap: 10px;">
             <button onclick="acceptCookies()" style="background: #d4af37; color: #000; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">Accept</button>
