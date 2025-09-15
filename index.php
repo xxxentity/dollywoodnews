@@ -747,7 +747,7 @@ $latestArticles = array_slice($articles, 3);
     <!-- Breaking News Ticker -->
     <div class="breaking-news">
         <div class="breaking-news-content">
-            <span>🎢 Dollywood announces record-breaking attendance for 2025 season • 🎭 New shows debut this summer • 🍂 Fall festival tickets now on sale • 🎄 Christmas at Dollywood planning begins</span>
+            <span>🎃 Harvest Festival NOW OPEN through October 27! • 🍂 NEW Candy Corn Country debuts for 2025 • ✨ Great Pumpkin LumiNights illuminates 12,000+ pumpkins nightly • 🎵 Over 700 live performances featuring 140+ artists • 🏆 Voted USA's #1 Fall Theme Park Event</span>
         </div>
     </div>
 
