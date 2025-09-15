@@ -79,7 +79,21 @@ foreach ($articles as $index => $article) {
     $priority = number_format($priority, 1);
 
     $xml .= '    <url>' . PHP_EOL;
-    $xml .= '        <loc>' . $domain . '/article.php?id=' . $article['id'] . '</loc>' . PHP_EOL;
+    // Generate clean URL with slug
+    function generateSlug($title) {
+        $slug = strtolower($title);
+        $slug = preg_replace('/[^a-z0-9]+/', '-', $slug);
+        $slug = preg_replace('/-+/', '-', $slug);
+        $slug = trim($slug, '-');
+        if (strlen($slug) > 60) {
+            $slug = substr($slug, 0, 60);
+            $slug = rtrim($slug, '-');
+        }
+        return $slug;
+    }
+
+    $slug = generateSlug($article['title']);
+    $xml .= '        <loc>' . $domain . '/article/' . $article['id'] . '/' . $slug . '</loc>' . PHP_EOL;
     $xml .= '        <lastmod>' . $article['formatted_date'] . '</lastmod>' . PHP_EOL;
     $xml .= '        <changefreq>monthly</changefreq>' . PHP_EOL;
     $xml .= '        <priority>' . $priority . '</priority>' . PHP_EOL;

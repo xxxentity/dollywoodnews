@@ -26,14 +26,14 @@
     <url>
         <loc>https://dollywoodnews.com/privacy.php</loc>
         <lastmod>2025-09-10</lastmod>
-        <changefreq>yearly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
 
     <url>
         <loc>https://dollywoodnews.com/terms.php</loc>
         <lastmod>2025-09-10</lastmod>
-        <changefreq>yearly</changefreq>
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
 
@@ -45,408 +45,340 @@
     </url>
 
     <!-- Articles (Total: 56) -->
-    <!-- Week 13 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=56</loc>
+        <loc>https://dollywoodnews.com/article/56/dollywood-s-harvest-festival-opening-weekend-operations</loc>
         <lastmod>2025-09-15</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.90</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=55</loc>
+        <loc>https://dollywoodnews.com/article/55/candy-corn-country-grand-opening-draws-crowds-to-dollywood</loc>
         <lastmod>2025-09-14</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.89</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=54</loc>
+        <loc>https://dollywoodnews.com/article/54/great-pumpkin-luminights-makes-spectacular-2025-season</loc>
         <lastmod>2025-09-13</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.88</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=53</loc>
+        <loc>https://dollywoodnews.com/article/53/dollywood-s-harvest-festival-opens-september-12-with-record</loc>
         <lastmod>2025-09-12</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.87</priority>
     </url>
-
-    <!-- Week 12 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=52</loc>
+        <loc>https://dollywoodnews.com/article/52/dollywood-staff-complete-final-training-for-harvest</loc>
         <lastmod>2025-09-06</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.86</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=51</loc>
+        <loc>https://dollywoodnews.com/article/51/great-pumpkin-luminights-final-testing-complete-as-concert</loc>
         <lastmod>2025-09-05</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.85</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=50</loc>
+        <loc>https://dollywoodnews.com/article/50/dollywood-s-new-candy-corn-country-completes-transformation</loc>
         <lastmod>2025-09-04</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.84</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=49</loc>
+        <loc>https://dollywoodnews.com/article/49/dollywood-s-12-000-pumpkin-display-installation-complete</loc>
         <lastmod>2025-09-03</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.83</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=48</loc>
+        <loc>https://dollywoodnews.com/article/48/dollywood-completes-final-harvest-festival-preparations-one</loc>
         <lastmod>2025-09-02</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.82</priority>
     </url>
-
-    <!-- Week 11 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=47</loc>
+        <loc>https://dollywoodnews.com/article/47/dollywood-completes-great-pumpkin-luminights-technical</loc>
         <lastmod>2025-08-30</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.81</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=46</loc>
+        <loc>https://dollywoodnews.com/article/46/dollywood-begins-large-scale-pumpkin-installation-for</loc>
         <lastmod>2025-08-29</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.80</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=45</loc>
+        <loc>https://dollywoodnews.com/article/45/dollywood-entertainment-teams-complete-final-rehearsals-for</loc>
         <lastmod>2025-08-28</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.79</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=44</loc>
+        <loc>https://dollywoodnews.com/article/44/dollywood-intensifies-pre-harvest-festival-setup-two-weeks</loc>
         <lastmod>2025-08-26</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.78</priority>
     </url>
-
-    <!-- Week 10 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=43</loc>
+        <loc>https://dollywoodnews.com/article/43/dollywood-reveals-harvest-festival-concert-lineup-featuring</loc>
         <lastmod>2025-08-23</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.77</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=42</loc>
+        <loc>https://dollywoodnews.com/article/42/dollywood-begins-installing-fall-decorations-for-harvest</loc>
         <lastmod>2025-08-21</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.76</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=41</loc>
+        <loc>https://dollywoodnews.com/article/41/dollywood-launches-harvest-festival-marketing-campaign-for</loc>
         <lastmod>2025-08-19</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.75</priority>
     </url>
-
-    <!-- Week 9 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=40</loc>
+        <loc>https://dollywoodnews.com/article/40/dollywood-begins-early-harvest-festival-setup-as-opening</loc>
         <lastmod>2025-08-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.74</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=39</loc>
+        <loc>https://dollywoodnews.com/article/39/dollywood-showcases-2025-improvements-as-part-of-40th</loc>
         <lastmod>2025-08-14</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.73</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=38</loc>
+        <loc>https://dollywoodnews.com/article/38/dollywood-continues-fall-season-preparation-one-month</loc>
         <lastmod>2025-08-12</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.72</priority>
     </url>
-
-    <!-- Week 8 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=37</loc>
+        <loc>https://dollywoodnews.com/article/37/dollywood-accelerates-harvest-festival-preparations-for</loc>
         <lastmod>2025-08-07</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.71</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=36</loc>
+        <loc>https://dollywoodnews.com/article/36/dollywood-enters-transition-period-as-park-prepares-for</loc>
         <lastmod>2025-08-05</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.70</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=35</loc>
+        <loc>https://dollywoodnews.com/article/35/dollywood-s-smoky-mountain-summer-celebration-concludes</loc>
         <lastmod>2025-08-03</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.69</priority>
     </url>
-
-    <!-- Week 7 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=34</loc>
+        <loc>https://dollywoodnews.com/article/34/end-of-summer-special-events-mark-close-of-dollywood-s-peak</loc>
         <lastmod>2025-07-29</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.68</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=33</loc>
+        <loc>https://dollywoodnews.com/article/33/dollywood-prepares-for-fall-season-transition-as-summer</loc>
         <lastmod>2025-07-28</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.67</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=32</loc>
+        <loc>https://dollywoodnews.com/article/32/dollywood-s-smoky-mountain-summer-celebration-enters-final</loc>
         <lastmod>2025-07-27</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.66</priority>
     </url>
-
-    <!-- Week 6 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=31</loc>
+        <loc>https://dollywoodnews.com/article/31/dollywood-s-big-bear-mountain-construction-reaches-halfway</loc>
         <lastmod>2025-07-24</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.65</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=30</loc>
+        <loc>https://dollywoodnews.com/article/30/dollywood-s-environmental-sustainability-report-shows-40</loc>
         <lastmod>2025-07-23</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.64</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=29</loc>
+        <loc>https://dollywoodnews.com/article/29/dollywood-employee-appreciation-week-showcases-team-members</loc>
         <lastmod>2025-07-22</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.63</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=28</loc>
+        <loc>https://dollywoodnews.com/article/28/dollywood-s-christmas-in-july-event-brings-holiday-magic-to</loc>
         <lastmod>2025-07-21</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.62</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=27</loc>
+        <loc>https://dollywoodnews.com/article/27/dollywood-s-culinary-team-introduces-farm-to-table-summer</loc>
         <lastmod>2025-07-19</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.61</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=26</loc>
+        <loc>https://dollywoodnews.com/article/26/dollywood-s-accessibility-services-receive-national</loc>
         <lastmod>2025-07-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.60</priority>
     </url>
-
-    <!-- Week 5 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=25</loc>
+        <loc>https://dollywoodnews.com/article/25/dollywood-s-summer-concert-series-features-rising-country</loc>
         <lastmod>2025-07-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.59</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=24</loc>
+        <loc>https://dollywoodnews.com/article/24/dollywood-introduces-enhanced-mobile-app-features-for</loc>
         <lastmod>2025-07-15</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.58</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=23</loc>
+        <loc>https://dollywoodnews.com/article/23/dollywood-s-wild-eagle-wing-coaster-celebrates-milestone-5</loc>
         <lastmod>2025-07-14</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.57</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=22</loc>
+        <loc>https://dollywoodnews.com/article/22/dolly-parton-s-smoky-mountain-adventures-water-park</loc>
         <lastmod>2025-07-13</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.56</priority>
     </url>
-
-    <!-- Week 4 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=21</loc>
+        <loc>https://dollywoodnews.com/article/21/dollywood-express-steam-locomotives-receive-mid-season</loc>
         <lastmod>2025-07-10</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.55</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=20</loc>
+        <loc>https://dollywoodnews.com/article/20/lightning-rod-achieves-record-performance-metrics-during</loc>
         <lastmod>2025-07-09</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.54</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=19</loc>
+        <loc>https://dollywoodnews.com/article/19/dollywood-s-craftsman-s-valley-unveils-new-artisan</loc>
         <lastmod>2025-07-08</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.53</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=18</loc>
+        <loc>https://dollywoodnews.com/article/18/dollywood-s-summer-tasting-pass-offers-culinary-adventure</loc>
         <lastmod>2025-07-07</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.52</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=17</loc>
+        <loc>https://dollywoodnews.com/article/17/dollywood-s-independence-day-fireworks-spectacular-receives</loc>
         <lastmod>2025-07-06</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.51</priority>
     </url>
-
-    <!-- Week 3 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=16</loc>
+        <loc>https://dollywoodnews.com/article/16/mid-season-assessment-dollywood-s-summer-celebration</loc>
         <lastmod>2025-07-02</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.50</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=15</loc>
+        <loc>https://dollywoodnews.com/article/15/dollywood-celebrates-independence-day-with-tennessee-army</loc>
         <lastmod>2025-07-01</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.49</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=14</loc>
+        <loc>https://dollywoodnews.com/article/14/country-fair-s-bubble-foam-zone-emerges-as-summer-s-hottest</loc>
         <lastmod>2025-06-30</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.48</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=13</loc>
+        <loc>https://dollywoodnews.com/article/13/dollywood-extends-operating-hours-for-summer-season-to</loc>
         <lastmod>2025-06-29</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.47</priority>
     </url>
-
-    <!-- Week 2 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=12</loc>
+        <loc>https://dollywoodnews.com/article/12/dollywood-s-40th-anniversary-programming-showcases-four</loc>
         <lastmod>2025-06-26</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.46</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=11</loc>
+        <loc>https://dollywoodnews.com/article/11/dollywood-s-summer-celebration-reaches-peak-season-with</loc>
         <lastmod>2025-06-25</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.45</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=10</loc>
+        <loc>https://dollywoodnews.com/article/10/wildwood-grove-transforms-into-nightly-dance-destination</loc>
         <lastmod>2025-06-24</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.44</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=9</loc>
+        <loc>https://dollywoodnews.com/article/9/sweet-summer-nights-gets-major-enhancement-with-30-minute</loc>
         <lastmod>2025-06-23</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.43</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=8</loc>
+        <loc>https://dollywoodnews.com/article/8/fan-favorite-shows-return-to-dollywood-as-gazillion-bubble</loc>
         <lastmod>2025-06-22</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.42</priority>
     </url>
-
-    <!-- Week 1 Articles -->
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=7</loc>
+        <loc>https://dollywoodnews.com/article/7/dollywood-unveils-revolutionary-40th-anniversary-drone-show</loc>
         <lastmod>2025-06-19</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.41</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=6</loc>
+        <loc>https://dollywoodnews.com/article/6/dollywood-s-smoky-mountain-summer-celebration-kicks-off</loc>
         <lastmod>2025-06-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.40</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=5</loc>
+        <loc>https://dollywoodnews.com/article/5/dollywood-s-new-southern-hospitality-hotel-opens-to-rave</loc>
         <lastmod>2025-06-17</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.39</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=4</loc>
+        <loc>https://dollywoodnews.com/article/4/dollywood-launches-groundbreaking-environmental</loc>
         <lastmod>2025-06-16</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.38</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=3</loc>
+        <loc>https://dollywoodnews.com/article/3/dolly-parton-surprises-guests-with-impromptu-performance-at</loc>
         <lastmod>2025-06-15</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.37</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=2</loc>
+        <loc>https://dollywoodnews.com/article/2/dollywood-s-harvest-festival-breaks-attendance-records-with</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.36</priority>
     </url>
-
     <url>
-        <loc>https://dollywoodnews.com/article.php?id=1</loc>
+        <loc>https://dollywoodnews.com/article/1/dollywood-announces-revolutionary-new-virtual-reality</loc>
         <lastmod>2025-06-15</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.35</priority>
     </url>
 </urlset>

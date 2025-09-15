@@ -139,4 +139,26 @@ function truncateText($text, $length = 150) {
 function sanitizeInput($input) {
     return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8');
 }
+
+function generateSlug($title) {
+    // Convert to lowercase
+    $slug = strtolower($title);
+
+    // Replace spaces and special characters with hyphens
+    $slug = preg_replace('/[^a-z0-9]+/', '-', $slug);
+
+    // Remove multiple consecutive hyphens
+    $slug = preg_replace('/-+/', '-', $slug);
+
+    // Trim hyphens from start and end
+    $slug = trim($slug, '-');
+
+    // Limit length to 60 characters
+    if (strlen($slug) > 60) {
+        $slug = substr($slug, 0, 60);
+        $slug = rtrim($slug, '-');
+    }
+
+    return $slug;
+}
 ?>

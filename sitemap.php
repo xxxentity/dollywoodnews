@@ -113,7 +113,7 @@ foreach ($articles as $article) {
                     <div class="sitemap-links">
                         <?php foreach ($monthArticles as $article): ?>
                             <div class="sitemap-link">
-                                <a href="article.php?id=<?php echo $article['id']; ?>">
+                                <a href="article/<?php echo $article['id']; ?>/<?php echo generateSlug($article['title']); ?>">
                                     <?php echo htmlspecialchars($article['title']); ?>
                                 </a>
                                 <span class="sitemap-date"><?php echo $article['date']; ?></span>

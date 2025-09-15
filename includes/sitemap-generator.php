@@ -75,7 +75,10 @@ function generateSitemap() {
         $priority = number_format($priority, 1);
 
         $xml .= '    <url>' . PHP_EOL;
-        $xml .= '        <loc>' . $domain . '/article.php?id=' . $article['id'] . '</loc>' . PHP_EOL;
+        // Generate clean URL with slug
+        require_once __DIR__ . '/functions.php';
+        $slug = generateSlug($article['title']);
+        $xml .= '        <loc>' . $domain . '/article/' . $article['id'] . '/' . $slug . '</loc>' . PHP_EOL;
         $xml .= '        <lastmod>' . $article['formatted_date'] . '</lastmod>' . PHP_EOL;
         $xml .= '        <changefreq>monthly</changefreq>' . PHP_EOL;
         $xml .= '        <priority>' . $priority . '</priority>' . PHP_EOL;
