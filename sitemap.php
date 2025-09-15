@@ -18,6 +18,16 @@ foreach ($articles as $article) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitemap - Dollywood News</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5K01EEMBBN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5K01EEMBBN');
+    </script>
+
     <link rel="stylesheet" href="assets/css/styles.css">
     <style>
         .sitemap-container {
