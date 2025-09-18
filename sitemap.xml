@@ -44,14 +44,25 @@
         <priority>0.4</priority>
     </url>
 
+    <!-- Articles (Total: 59) -->
     <url>
-        <loc>https://dollywoodnews.com/admin.php</loc>
-        <lastmod>2025-09-10</lastmod>
+        <loc>https://dollywoodnews.com/article/59/dollywood-launches-earliest-season-pass-sales-in-park-histor</loc>
+        <lastmod>2025-09-17</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.3</priority>
+        <priority>0.92</priority>
     </url>
-
-    <!-- Articles (Total: 56) -->
+    <url>
+        <loc>https://dollywoodnews.com/article/58/dolly-parton-misses-historic-dollywood-announcement-due-to-k</loc>
+        <lastmod>2025-09-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.91</priority>
+    </url>
+    <url>
+        <loc>https://dollywoodnews.com/article/57/dollywood-unveils-nightflight-expedition-worlds-first-hybrid</loc>
+        <lastmod>2025-09-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.93</priority>
+    </url>
     <url>
         <loc>https://dollywoodnews.com/article/56/dollywoods-harvest-festival-opening-weekend-operations-excee</loc>
         <lastmod>2025-09-15</lastmod>

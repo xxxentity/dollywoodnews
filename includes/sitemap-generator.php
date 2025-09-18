@@ -28,8 +28,8 @@ function generateSitemap() {
         ['path' => '/contact', 'changefreq' => 'monthly', 'priority' => '0.7'],
         ['path' => '/privacy', 'changefreq' => 'yearly', 'priority' => '0.5'],
         ['path' => '/terms', 'changefreq' => 'yearly', 'priority' => '0.5'],
-        ['path' => '/sitemap', 'changefreq' => 'weekly', 'priority' => '0.4'],
-        ['path' => '/admin.php', 'changefreq' => 'monthly', 'priority' => '0.3']
+        ['path' => '/sitemap', 'changefreq' => 'weekly', 'priority' => '0.4']
+        // Note: admin.php excluded per robots.txt disallow
     ];
 
     $xml .= '    <!-- Static Pages -->' . PHP_EOL;
