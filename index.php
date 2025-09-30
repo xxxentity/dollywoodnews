@@ -738,6 +738,7 @@ $latestArticles = array_slice($articles, 3);
             </a>
             <nav>
                 <a href="/" class="nav-link active">Home</a>
+                <a href="/history" class="nav-link">History</a>
                 <a href="/about" class="nav-link">About</a>
                 <a href="/contact" class="nav-link">Contact</a>
             </nav>

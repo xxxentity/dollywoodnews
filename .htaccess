@@ -18,6 +18,7 @@ RewriteRule ^article/([0-9]+)/(.*)$ article.php?id=$1 [L,QSA]
 
 # Clean URLs for static pages
 RewriteRule ^about/?$ about.php [L]
+RewriteRule ^history/?$ history.php [L]
 RewriteRule ^contact/?$ contact.php [L]
 RewriteRule ^privacy/?$ privacy.php [L]
 RewriteRule ^terms/?$ terms.php [L]

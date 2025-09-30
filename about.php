@@ -445,6 +445,7 @@ require_once 'includes/functions.php';
             </a>
             <nav>
                 <a href="/" class="nav-link">Home</a>
+                <a href="/history" class="nav-link">History</a>
                 <a href="/about" class="nav-link active">About</a>
                 <a href="/contact" class="nav-link">Contact</a>
             </nav>
