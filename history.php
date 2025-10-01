@@ -49,11 +49,21 @@ require_once 'includes/security.php';
             box-sizing: border-box;
         }
 
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --dark: #000000;
+            --dark-gray: #1a1a1a;
+            --text-light: #ffffff;
+            --text-gray: #cccccc;
+        }
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            line-height: 1.7;
-            color: #2c3e50;
-            background-color: #fafbfc;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-gray) 50%, var(--dark) 100%);
+            min-height: 100vh;
         }
 
         .container {
@@ -64,13 +74,14 @@ require_once 'includes/security.php';
 
         /* Header */
         .header {
-            background: linear-gradient(135deg, #e74c3c, #c0392b);
-            color: white;
-            padding: 1rem 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 9999;
+            border-bottom: 2px solid var(--gold);
+            box-shadow: 0 4px 30px rgba(212, 175, 55, 0.3);
+            padding: 1rem 0;
         }
 
         .header-content {
@@ -81,17 +92,29 @@ require_once 'includes/security.php';
 
         .logo {
             text-decoration: none;
-            color: white;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         .logo h1 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .tagline {
             font-size: 0.9rem;
-            opacity: 0.9;
+            color: var(--text-gray);
             margin-top: 2px;
         }
 
@@ -101,24 +124,31 @@ require_once 'includes/security.php';
         }
 
         .nav-link {
-            color: white;
+            color: var(--text-gray);
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .nav-link:hover,
+        .nav-link:hover {
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
+
         .nav-link.active {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-1px);
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
         }
 
         /* Article Header */
         .article-header {
-            background: linear-gradient(135deg, #2c3e50, #34495e);
-            color: white;
+            background: linear-gradient(135deg, var(--dark-gray), var(--dark));
+            border-bottom: 2px solid var(--gold);
+            color: var(--text-light);
             padding: 4rem 0;
             text-align: center;
         }
@@ -128,11 +158,15 @@ require_once 'includes/security.php';
             font-weight: 700;
             margin-bottom: 1rem;
             line-height: 1.2;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .article-subtitle {
             font-size: 1.3rem;
-            opacity: 0.9;
+            color: var(--text-gray);
             max-width: 800px;
             margin: 0 auto;
         }
@@ -142,6 +176,10 @@ require_once 'includes/security.php';
             max-width: 900px;
             margin: 0 auto;
             padding: 4rem 20px;
+            background: rgba(26, 26, 26, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin-top: 3rem;
         }
 
         .section {
@@ -150,16 +188,16 @@ require_once 'includes/security.php';
 
         .section-title {
             font-size: 2.5rem;
-            color: #2c3e50;
+            color: var(--gold);
             margin-bottom: 2rem;
-            border-bottom: 3px solid #e74c3c;
+            border-bottom: 3px solid var(--gold);
             padding-bottom: 0.5rem;
             font-weight: 600;
         }
 
         .subsection-title {
             font-size: 1.8rem;
-            color: #34495e;
+            color: var(--gold-light);
             margin: 2.5rem 0 1.5rem 0;
             font-weight: 600;
         }
@@ -168,10 +206,13 @@ require_once 'includes/security.php';
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
             text-align: justify;
+            color: var(--text-gray);
+            line-height: 1.8;
         }
 
         .highlight {
-            background: linear-gradient(120deg, #fff3cd 0%, #fff3cd 100%);
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--gold-light);
             padding: 0.2rem 0.4rem;
             border-radius: 3px;
             font-weight: 600;
@@ -180,7 +221,7 @@ require_once 'includes/security.php';
         .timeline-item {
             margin-bottom: 2rem;
             padding-left: 2rem;
-            border-left: 3px solid #e74c3c;
+            border-left: 3px solid var(--gold);
             position: relative;
         }
 
@@ -192,19 +233,19 @@ require_once 'includes/security.php';
             width: 13px;
             height: 13px;
             border-radius: 50%;
-            background: #e74c3c;
+            background: var(--gold);
         }
 
         .timeline-year {
             font-size: 1.4rem;
             font-weight: 700;
-            color: #e74c3c;
+            color: var(--gold);
             margin-bottom: 0.5rem;
         }
 
         .timeline-content {
             font-size: 1.1rem;
-            color: #2c3e50;
+            color: var(--text-gray);
         }
 
         .image-container {
@@ -227,7 +268,7 @@ require_once 'includes/security.php';
 
         .image-caption {
             font-style: italic;
-            color: #7f8c8d;
+            color: var(--text-gray);
             margin-top: 1rem;
             font-size: 0.95rem;
         }
@@ -238,17 +279,23 @@ require_once 'includes/security.php';
             gap: 2rem;
             margin: 3rem 0;
             padding: 2rem;
-            background: white;
+            background: rgba(0, 0, 0, 0.5);
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid var(--gold);
+            backdrop-filter: blur(10px);
         }
 
         .stat-item {
             text-align: center;
             padding: 1.5rem;
-            background: linear-gradient(135deg, #e74c3c, #c0392b);
-            color: white;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--dark);
             border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
         }
 
         .stat-number {
@@ -259,31 +306,32 @@ require_once 'includes/security.php';
 
         .stat-label {
             font-size: 0.9rem;
-            opacity: 0.9;
+            color: var(--dark-gray);
         }
 
         .quote-box {
-            background: #f8f9fa;
-            border-left: 4px solid #e74c3c;
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid var(--gold);
             padding: 2rem;
             margin: 2rem 0;
             border-radius: 0 8px 8px 0;
             font-style: italic;
             font-size: 1.2rem;
-            color: #2c3e50;
+            color: var(--text-gray);
         }
 
         .quote-author {
             font-weight: 600;
             font-style: normal;
             margin-top: 1rem;
-            color: #e74c3c;
+            color: var(--gold);
         }
 
         /* Footer */
         .footer {
-            background: #2c3e50;
-            color: white;
+            background: var(--dark);
+            border-top: 2px solid var(--gold);
+            color: var(--text-light);
             padding: 3rem 0;
             margin-top: 4rem;
         }
@@ -296,27 +344,28 @@ require_once 'includes/security.php';
 
         .footer-section h3 {
             margin-bottom: 1rem;
-            color: #e74c3c;
+            color: var(--gold);
         }
 
         .footer-section p,
         .footer-section a {
-            color: #bdc3c7;
+            color: var(--text-gray);
             text-decoration: none;
             margin-bottom: 0.5rem;
             display: block;
+            transition: color 0.3s ease;
         }
 
         .footer-section a:hover {
-            color: white;
+            color: var(--gold);
         }
 
         .footer-bottom {
             text-align: center;
             margin-top: 2rem;
             padding-top: 2rem;
-            border-top: 1px solid #34495e;
-            color: #95a5a6;
+            border-top: 1px solid var(--gold);
+            color: var(--text-gray);
         }
 
         /* Responsive Design */
