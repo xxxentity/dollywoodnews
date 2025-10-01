@@ -341,44 +341,55 @@ require_once 'includes/security.php';
         }
 
         /* Footer */
-        .footer {
-            background: var(--dark);
+        footer {
+            background: rgba(0, 0, 0, 0.95);
             border-top: 2px solid var(--gold);
-            color: var(--text-light);
-            padding: 3rem 0;
             margin-top: 4rem;
+            padding: 2rem 0;
+            text-align: center;
         }
 
         .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: var(--gold);
+        .footer-logo {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
         }
 
-        .footer-section p,
-        .footer-section a {
+        .footer-text {
             color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            margin: 1rem 0;
+        }
+
+        .footer-links a {
+            color: var(--gold);
             text-decoration: none;
-            margin-bottom: 0.5rem;
-            display: block;
+            margin: 0 1rem;
+            font-size: 1rem;
             transition: color 0.3s ease;
         }
 
-        .footer-section a:hover {
-            color: var(--gold);
+        .footer-links a:hover {
+            color: var(--gold-light);
         }
 
-        .footer-bottom {
-            text-align: center;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--gold);
+        .footer-copyright {
             color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-top: 1rem;
         }
 
         /* Responsive Design */
@@ -887,28 +898,15 @@ require_once 'includes/security.php';
     </article>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>About Dollywood News</h3>
-                    <p>Your premier source for the latest updates, news, and insights about Dollywood theme park and the surrounding Smoky Mountain region.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <a href="/">Home</a>
-                    <a href="/history">History</a>
-                    <a href="/about">About</a>
-                    <a href="/contact">Contact</a>
-                </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <p>Stay connected for the latest Dollywood updates and theme park news from the heart of Tennessee.</p>
-                </div>
+    <footer>
+        <div class="footer-content">
+            <img src="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png" alt="Dollywood News" class="footer-logo">
+            <p class="footer-text">Your trusted source for all things Dollywood</p>
+            <div class="footer-links">
+                <a href="/terms">Terms of Service</a>
+                <a href="/privacy">Privacy Policy</a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Dollywood News. All rights reserved. | A tribute to the rich history and bright future of Tennessee's premier theme park destination.</p>
-            </div>
+            <p class="footer-copyright">© 2025 Dollywood News. All rights reserved.</p>
         </div>
     </footer>
 
