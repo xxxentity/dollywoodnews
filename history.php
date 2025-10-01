@@ -90,32 +90,45 @@ require_once 'includes/security.php';
             align-items: center;
         }
 
-        .logo {
-            text-decoration: none;
-            color: var(--gold);
+        .logo-section {
             display: flex;
             align-items: center;
             gap: 1rem;
+            text-decoration: none;
             transition: transform 0.3s ease;
         }
 
-        .logo:hover {
+        .logo-section:hover {
             transform: scale(1.05);
         }
 
-        .logo h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .logo-img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            animation: glow 2s ease-in-out infinite;
         }
 
-        .tagline {
-            font-size: 0.9rem;
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+            50% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.8); }
+        }
+
+        .logo-text h1 {
+            color: var(--gold);
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo-text .tagline {
             color: var(--text-gray);
-            margin-top: 2px;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            margin-top: -2px;
         }
 
         nav {
@@ -407,9 +420,12 @@ require_once 'includes/security.php';
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <a href="/" class="logo">
-                    <h1>Dollywood News</h1>
-                    <div class="tagline">Your Source for Dollywood Updates</div>
+                <a href="/" class="logo-section">
+                    <img src="https://i.postimg.cc/J4tYRYdf/Chat-GPT-Image-Jun-17-2025-09-52-07-AM.png" alt="Dollywood News" class="logo-img">
+                    <div class="logo-text">
+                        <h1>Dollywood News</h1>
+                        <div class="tagline">Your Source for Dollywood Updates</div>
+                    </div>
                 </a>
                 <nav>
                     <a href="/" class="nav-link">Home</a>
