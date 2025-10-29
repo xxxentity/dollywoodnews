@@ -767,7 +767,7 @@ $latestArticles = array_slice($articles, 3);
     <!-- Breaking News Ticker -->
     <div class="breaking-news">
         <div class="breaking-news-content">
-            <span>🎃 Harvest Festival NOW OPEN through October 27! • 🍂 NEW Candy Corn Country debuts for 2025 • ✨ Great Pumpkin LumiNights illuminates 12,000+ pumpkins nightly • 🎵 Over 700 live performances featuring 140+ artists • 🏆 Voted USA's #1 Fall Theme Park Event</span>
+            <span>🎢 WORLD'S FIRST Indoor Hybrid Coaster/Whitewater Ride Coming Spring 2026! • 🚀 NightFlight Expedition: $50M Investment - Largest in Dollywood History • 🎄 Smoky Mountain Christmas Opens November 1 - 6 Million Lights • 🎟️ $5 Sevier County Days: November 1-9 • 🏆 Dollywood Breaks Into Top 20 Most-Visited Parks in North America</span>
         </div>
     </div>
 
