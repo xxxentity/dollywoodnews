@@ -378,14 +378,14 @@ $latestArticles = array_slice($articles, 3);
         }
         
         .side-article {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+            position: relative;
             border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 12px;
-            padding: 1.5rem;
+            overflow: hidden;
             cursor: pointer;
             transition: all 0.3s ease;
             animation: fadeInUp 0.8s ease backwards;
+            min-height: 180px;
         }
         
         .side-article:nth-child(2) {
@@ -396,9 +396,27 @@ $latestArticles = array_slice($articles, 3);
             transform: translateX(5px);
             box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
             border-color: var(--gold);
-            background: rgba(212, 175, 55, 0.05);
         }
-        
+
+        .side-article-image {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .side-article-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        }
+
         .side-article h3 {
             color: var(--gold);
             font-size: 1.2rem;
@@ -406,12 +424,13 @@ $latestArticles = array_slice($articles, 3);
             line-height: 1.3;
             margin-bottom: 0.8rem;
             transition: color 0.3s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
-        
+
         .side-article:hover h3 {
             color: var(--gold-light);
         }
-        
+
         .side-article .excerpt {
             color: var(--text-gray);
             font-size: 0.95rem;
@@ -775,10 +794,12 @@ $latestArticles = array_slice($articles, 3);
         <div class="side-featured">
             <?php for ($i = 1; $i < min(3, count($featuredArticles)); $i++): ?>
             <article class="side-article" onclick="window.location.href='article/<?php echo $featuredArticles[$i]['id']; ?>/<?php echo generateSlug($featuredArticles[$i]['title']); ?>'">
-                <h3><?php echo htmlspecialchars($featuredArticles[$i]['title']); ?></h3>
-                <p class="excerpt"><?php echo htmlspecialchars(substr($featuredArticles[$i]['excerpt'], 0, 100)) . '...'; ?></p>
-                <div class="article-meta">
-                    <span>📅 <?php echo htmlspecialchars($featuredArticles[$i]['date']); ?></span>
+                <div class="side-article-image" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('<?php echo isset($featuredArticles[$i]['image']) ? $featuredArticles[$i]['image'] : 'https://images.unsplash.com/photo-1544306094-3e8dc1778d4e?w=800'; ?>') center/cover;"></div>
+                <div class="side-article-content">
+                    <h3><?php echo htmlspecialchars($featuredArticles[$i]['title']); ?></h3>
+                    <div class="article-meta">
+                        <span>📅 <?php echo htmlspecialchars($featuredArticles[$i]['date']); ?></span>
+                    </div>
                 </div>
             </article>
             <?php endfor; ?>
